@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!-- DTD 
+<!DOCTYPE mensajeria SYSTEM "mesajeriaApp.dtd">
+
+-->
+
+
+<mensajeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="mesajeriaApp.xsd"> 
+<!-- SCHEMA
+<mensajeria>-->
+    <usuarios>
+        <usuario login="ju123" password="123oo5678">
+            <nombre>Julian</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="mmm123" password="1234avc78">
+            <nombre>Maria</nombre>
+            <bloqueados>
+                <bloqueado user="lu123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="lu123" password="aa345678">
+            <nombre>Lucas</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="ant123" password="12345678">
+            <nombre>Antonio</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="jul123" password="12345678">
+            <nombre>Julián</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="es123" password="12345678">
+            <nombre>Esperanza</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="Man23" password="12345678">
+            <nombre>Manuel</nombre>
+        </usuario>
+        <usuario login="rob123" password="12345678">
+            <nombre>Roberto</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="fe123" password="12345678">
+            <nombre>Fernando</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="lau123" password="12345678">
+            <nombre>Laura</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="Pab123" password="12345678">
+            <nombre>Pablo</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="ana123" password="12345678">
+            <nombre>Ana</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="jm123" password="12345678">
+            <nombre>Jose Manuel</nombre>
+        </usuario>
+        <usuario login="ru123" password="12345678">
+            <nombre>Ruben</nombre>
+            <bloqueados>
+                <bloqueado user="mmm123"/>
+                <bloqueado user="en123"/>
+                <bloqueado user="jm123"/>
+            </bloqueados>
+        </usuario>
+        <usuario login="en123" password="12345678">
+            <nombre>Enrique</nombre>
+
+        </usuario>
+
+    </usuarios>
+    <grupos>
+        <grupo login="clase">
+            <miembro usuario="ju123"/>
+            <miembro usuario="ana123"/>
+            <miembro usuario="jm123"/>
+        </grupo>
+        <grupo login="basket">
+            <miembro usuario="ju123"/>
+            <miembro usuario="lu123"/>
+            <miembro usuario="jul123"/>
+            <miembro usuario="en123"/>
+        </grupo>
+    </grupos>
+    <mensajes>
+        <mensaje emisor="ju123" receptor="ana123" recibido="si" leido="si">
+            <texto>Donde estais? <emoji>22</emoji></texto>
+            <imagen>cara.jpg</imagen>
+        </mensaje>
+        <mensaje emisor="ju123" receptor="jm123" recibido="si" leido="si">
+            <texto>Donde estais? <emoji>22</emoji></texto>
+            <imagen>cara.jpg</imagen>
+            <video>cara.mov</video>
+            <imagen>risa.jpg</imagen>
+        </mensaje>
+        <mensaje emisor="ju123" receptor="ana123" recibido="si">
+            <texto>Donde estais?</texto>
+            <video>champion.mov</video>
+        </mensaje>
+        <mensaje emisor="ant123" receptor="es123" recibido="si" leido="si">
+            <texto>
+                <emoji>99</emoji>
+            </texto>
+        </mensaje>
+         <mensaje emisor="ant123" receptor="es123" recibido="si" leido="si">
+           <texto>Os estamos esperando</texto>
+        </mensaje>
+         <mensaje emisor="ant123" receptor="es123" recibido="si" leido="si">
+             <texto>
+                 <emoji>21</emoji>
+             </texto>
+        </mensaje>
+         <mensaje emisor="es123" receptor="ant123" recibido="si" leido="si">
+           <texto>siiiii</texto>
+        </mensaje>
+        <mensaje emisor="es123" receptor="ant123" recibido="si">
+            <texto>en 5 minutos <emoji>33</emoji><emoji>33</emoji></texto>
+        </mensaje>
+        <mensaje emisor="jm123" receptor="ant123" recibido="si">
+           <texto>hola</texto>
+        </mensaje>
+    </mensajes>
+    
+</mensajeria>

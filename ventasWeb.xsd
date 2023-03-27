@@ -18,6 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
         <xs:selector xpath="clientes/cliente"/>
         <xs:field xpath="@login"/>  
     </xs:key>
+    
     <xs:keyref name="codigoProductoCompraKey" refer="codigoProductoKey">
         <xs:selector xpath="compras/compra"/>
         <xs:field xpath="@producto"/>  
@@ -55,17 +56,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
     </xs:complexType>
     <xs:complexType name="tProducto">
         <xs:sequence>
-            <xs:element name="descripcion" type="tDescripcion"/>
-            <xs:element name="color" type="xs:string"/>
-            <xs:element name="almacen" type="tAlmacen">
-                 <xs:key name="tipoTallasKey">
-                 <xs:selector xpath="./stock"/>
-                <xs:field xpath="@talla"/>  
+            <xs:element          name="descripcion"              type="tDescripcion"/>
+            <xs:element          name="color"                    type="xs:string"/>
+            <xs:element          name="almacen"                  type="tAlmacen">
+                 <xs:key         name="tipoTallasKey">
+                 <xs:selector    xpath="./stock"/>
+                <xs:field        xpath="@talla"/>  
               </xs:key>
             </xs:element>
         </xs:sequence>
         <!--Artibutos-->
-        <xs:attribute name="codigo" type="tCodigo" use="required"/>
+        <xs:attribute            name="codigo"      type="tCodigo" use="required"/>
         
 
     </xs:complexType>

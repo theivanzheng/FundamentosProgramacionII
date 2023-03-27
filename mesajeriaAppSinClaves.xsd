@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="mensajeria" type = "tMensajeria">
+           </xs:element>
+    
+    <xs:complexType name="tMensajeria">
+        <xs:sequence>
+            <xs:element name = "usuarios" type = "tUsuarios"/>
+            <xs:element name = "grupos" type = "tGrupos" minOccurs="0"/>
+            <xs:element name = "mensajes" type = "tMensajes"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tUsuarios">
+        <xs:sequence>
+            <xs:element name = "usuario" type = "tUsuario" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tGrupos">
+        <xs:sequence>
+            <xs:element name = "grupo" type = "tGrupo" maxOccurs="unbounded">
+                
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tMensajes">
+        <xs:sequence>
+            <xs:element name = "mensaje" type = "tMensaje" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tUsuario">
+        <xs:sequence>
+            <xs:element name = "nombre" type = "xs:string"/>
+            <xs:element name = "bloqueados" type = "tBloqueados" minOccurs="0">
+                <xs:key name="bloqueadosKey">
+                    <xs:selector xpath="bloqueado"/>
+                    <xs:field    xpath="@user"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="login"    type="tLogin"    use="required"/>
+        <xs:attribute name="password" type="tPassword" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tBloqueados">
+        <xs:sequence>
+            <xs:element name = "bloqueado" type = "tBloqueado" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tBloqueado">
+         <xs:attribute name="user"    type="tLogin"    use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tGrupo">
+        <xs:sequence>
+              <xs:element name = "miembro" type = "tMiembro" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="login"    type="tLogin"    use="required"/>
+    </xs:complexType>
+    <xs:complexType name="tMiembro">
+        <xs:attribute name="usuario" type="tLogin" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tMensaje">
+        <xs:sequence>
+            <xs:element name = "texto" type = "tTexto"/>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name = "imagen" type = "xs:string" />
+                <xs:element name = "video" type = "xs:string" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="emisor"   type="tLogin" use="required"/>
+        <xs:attribute name="receptor" type="tLogin" use="required"/>
+        <xs:attribute name="recibido" type="tRecibidoLeido" use="optional"/>
+        <xs:attribute name="leido"    type="tRecibidoLeido" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tTexto" mixed="true">
+        <xs:sequence>
+            <xs:element name="emoji" type="tEmoji" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+
+    </xs:complexType>
+    
+    <xs:simpleType name="tRecibidoLeido">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="si"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tLogin">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][a-zA-Z0-9]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tPassword">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{8}[a-zA-Z0-9]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tEmoji">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="99"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
