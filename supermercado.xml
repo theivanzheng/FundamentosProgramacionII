@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE supermercado SYSTEM "supermercado.dtd">
+
+<supermercado>
+    <producto codigo="QUE1235">
+        <descripcion>
+            Queso curado de oveja <importante>Disponibilidad limitada</importante>
+        </descripcion>
+    </producto>
+    <producto codigo="YOG1111">
+        <descripcion>
+            Yogurt sabores
+        </descripcion>
+    </producto>
+    <producto codigo="YOG1112">
+        <descripcion>
+            Yogurt natural
+        </descripcion>
+    </producto>
+    <producto codigo="ARR1111">
+        <descripcion>
+            Arroz blanco
+            <importante>Apto para celiacos</importante>
+            <importante>producto de china</importante>
+        </descripcion>
+    </producto>
+    <producto codigo="LEG1111">
+        <descripcion>
+            Legumbres
+        </descripcion>
+    </producto>
+    <producto codigo="LEC1111">
+        <descripcion>
+            Leche entera
+        </descripcion>
+    </producto>
+    <producto codigo="LEC1112">
+        <descripcion>
+            Leche semidesnatada
+        </descripcion>
+    </producto>
+    <producto codigo="LEC1113">
+        <descripcion>
+            Leche desnatada
+        </descripcion>
+    </producto>
+    <producto codigo="HUE1113">
+        <descripcion>
+            huevos 
+        </descripcion>
+    </producto>
+    
+    <caja codigo="caja1">
+        <compra>
+            <item codigoProducto="LEC1113" unidades="12"/>
+            <item codigoProducto="HUE1113" />
+            <item codigoProducto="YOG1112" unidades="12"/>
+        </compra>
+        <compra>
+            <item codigoProducto="LEC1113" />
+            <item codigoProducto="HUE1113" />
+            <item codigoProducto="YOG1112" />
+        </compra>
+        <compra>
+            <item codigoProducto="LEC1113" unidades="12"/>
+            <item codigoProducto="HUE1113" />
+            <item codigoProducto="YOG1111" unidades="6"/>
+        </compra>
+        <compra>
+            <item codigoProducto="LEC1113" unidades="12"/>
+        </compra>
+    </caja>
+    <caja codigo="caja2">
+        <compra>
+            <item codigoProducto="LEC1113" unidades="12"/>
+            <item codigoProducto="HUE1113" />
+            <item codigoProducto="YOG1112" unidades="12"/>
+            <item codigoProducto="LEC1112" />
+            <item codigoProducto="LEG1111" />
+            <item codigoProducto="YOG1111" />
+        </compra>
+        <compra>
+            <item codigoProducto="LEC1113" unidades="12"/>
+            <item codigoProducto="HUE1113" />
+            <item codigoProducto="YOG1111" unidades="6"/>
+        </compra>
+    </caja>
+    <caja codigo="caja3"></caja>
+    <cajero codigoCajero="EBG" codigoCaja="caja1">
+        <abierta>9</abierta>
+        <cerrada>11</cerrada>
+        <abierta>13</abierta>
+        <cerrada>15:30</cerrada>
+    </cajero>
+    <cajero codigoCajero="LBB" codigoCaja="caja2">
+        <abierta>9</abierta>
+        <cerrada>11</cerrada>
+        <abierta>17</abierta>
+        <cerrada>20:30</cerrada>
+    </cajero>
+    <cajero codigoCajero="EBG" codigoCaja="caja2">
+        <abierta>11</abierta>
+        <cerrada>13</cerrada>
+    </cajero>
+    <empleados>
+        <empleado codigo="EBG">
+            <nombre>Elisa Blazquez</nombre>
+            <puesto>caja</puesto>
+        </empleado>
+        <empleado codigo="LBB">
+            <nombre>Luis Bueno</nombre>
+            <puesto>caja</puesto>
+        </empleado>
+        <empleado codigo="LMG">
+            <nombre>Luisa Martín</nombre>
+            <puesto>caja</puesto>
+        </empleado>
+    </empleados>
+    
+</supermercado>

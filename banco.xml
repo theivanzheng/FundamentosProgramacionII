@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "banco.dtd">
+<banco>
+    <nombre>Banco Malo</nombre>
+    <cliente idCliente="a1234">
+        <nombre>Maria García</nombre>
+        <tarjeta tipo="MasterCard">
+            <numero>21040257845</numero>
+            <fechaCaducidad>
+                <año>2014</año>
+                <mes>10</mes>
+            </fechaCaducidad>
+            <credito>0</credito>
+        </tarjeta>
+        <tarjeta>
+            <numero>21040257855</numero>
+            <fechaCaducidad>
+                <año>2020</año>
+                <mes>10</mes>
+            </fechaCaducidad>
+            <credito>2000</credito>
+        </tarjeta>
+    </cliente>
+    <cliente idCliente="ebg22">
+        <nombre>José Manuel Gómez</nombre>
+    </cliente>
+    <cliente idCliente="bb25">
+        <nombre>Bienvenido Blanco</nombre>
+    </cliente>
+    <cliente idCliente="mm12">
+        <nombre>Maria Martín</nombre>
+        <tarjeta tipo="AmericanExpress">
+            <numero>2104124125</numero>
+            <fechaCaducidad>
+                <año>2025</año>
+                <mes>3</mes>
+            </fechaCaducidad>
+            <credito>1000</credito>
+        </tarjeta>
+    </cliente>
+    <cuenta titulares="a1234">
+        <saldo>2356</saldo>
+        <tarjetaCredito>21040257855</tarjetaCredito>
+        <movimiento>
+            <fecha>2013-01-01</fecha>
+            <cantidad>-100</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-01-10</fecha>
+            <cantidad>-100</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-01-15</fecha>
+            <cantidad>-150</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-01-25</fecha>
+            <cantidad>-200</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-01-31</fecha>
+            <cantidad>1000</cantidad>
+        </movimiento>
+    </cuenta>
+    
+    <cuenta titulares="mm12 ebg22">
+        <saldo>500</saldo>
+        <tarjetaCredito>2104124125</tarjetaCredito>
+        <movimiento>
+            <fecha>2013-02-01</fecha>
+            <cantidad>-100</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-02-12</fecha>
+            <cantidad>-100</cantidad>
+        </movimiento>
+        <movimiento>
+            <fecha>2013-02-15</fecha>
+            <cantidad>-150</cantidad>
+        </movimiento>
+    </cuenta>
+    <cuenta titulares="bb25">
+        <saldo>50000</saldo>
+    </cuenta>
+   
+</banco>

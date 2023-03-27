@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE registroCoronavirus SYSTEM "coronavirusB.dtd">
+
+<registroCoronavirus>
+    <habitantes>
+        <habitante codigoHabitante="ES0987654R" nacionalidad="ES" riesgo="alto">
+            <nombre>Alberto</nombre>
+            <apellidos>Martín</apellidos>
+            <apellidos>Martín</apellidos>
+            <fechaNacimiento>1930-01-29</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654S" nacionalidad="ES" riesgo="alto">
+            <nombre>Ramón</nombre>
+            <apellidos>Martín</apellidos>
+            <fechaNacimiento>1930-01-29</fechaNacimiento>
+            <lugarResidencia>Salamanca(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654T" nacionalidad="CA" riesgo="bajo">
+            <nombre>Antonio</nombre>
+            <apellidos>Gutierrez</apellidos>
+            <apellidos>García</apellidos>
+            <fechaNacimiento>2010-06-20</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654U" nacionalidad="ES" riesgo="alto">
+            <nombre>Marta</nombre>
+            <apellidos>Zibelina</apellidos>
+            <fechaNacimiento>1980-09-03</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654W" nacionalidad="ES">
+            <nombre>Laura</nombre>
+            <apellidos>García</apellidos>
+            <fechaNacimiento>1978-09-09</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654X" nacionalidad="ES" riesgo="bajo">
+            <nombre>Ana</nombre>
+            <apellidos>Alonso</apellidos>
+            <fechaNacimiento>1970-09-08</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654Y" nacionalidad="ES" riesgo="alto">
+            <nombre>Álvaro</nombre>
+            <apellidos>Villas</apellidos>
+            <fechaNacimiento>1940-08-07</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654Z" nacionalidad="ES" riesgo="alto">
+            <nombre>Lucas</nombre>
+            <apellidos>Blanco</apellidos>
+            <fechaNacimiento>1933-07-29</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654A" nacionalidad="ES">
+            <nombre>Santiago</nombre>
+            <apellidos>Carrera</apellidos>
+            <fechaNacimiento>1990-06-21</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654B" nacionalidad="ES" riesgo="alto">
+            <nombre>Amalia</nombre>
+            <apellidos>Garcia</apellidos>
+            <fechaNacimiento>1979-08-03</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654C" nacionalidad="ES" riesgo="bajo">
+            <nombre>Fernando</nombre>
+            <apellidos>Amor</apellidos>
+            <fechaNacimiento>2012-09-08</fechaNacimiento>
+            <lugarResidencia>Salamanca(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654D" nacionalidad="ES" riesgo="alto">
+            <nombre>María</nombre>
+            <apellidos>Martín</apellidos>
+            <fechaNacimiento>2015-09-09</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654E" nacionalidad="ES" riesgo="alto">
+            <nombre>Emilio</nombre>
+            <apellidos>Blanco</apellidos>
+            <fechaNacimiento>2000-01-01</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654F" nacionalidad="ES" riesgo="alto">
+            <nombre>Juan</nombre>
+            <apellidos>Morente</apellidos>
+            <fechaNacimiento>2000-02-29</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654G" nacionalidad="ES" riesgo="bajo">
+            <nombre>Manuel</nombre>
+            <apellidos>Barrio</apellidos>
+            <fechaNacimiento>2000-02-29</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+        <habitante codigoHabitante="ES0987654H" nacionalidad="ES" riesgo="bajo">
+            <nombre>Pablo</nombre>
+            <apellidos>Redondo</apellidos>
+            <fechaNacimiento>2000-02-29</fechaNacimiento>
+            <lugarResidencia>Madrid(ES)</lugarResidencia>
+        </habitante>
+    </habitantes>
+    <infectados>
+        <paciente habitante="ES0987654R" infectado="SI">
+            <tacking>
+                <latitud>40.4165001</latitud>
+                <longitud>-3.7025599</longitud>
+                <latitud>40.4165000</latitud>
+                <longitud>-3.7025600</longitud>
+                <latitud>40.4165001</latitud>
+                <longitud>-3.7025599</longitud>
+                <latitud>40.4165011</latitud>
+                <longitud>-4.7025599</longitud>
+            </tacking>
+        </paciente>
+        <paciente habitante="ES0987654U" infectado="SI">
+            <tacking>
+                <latitud>90.4165001</latitud>
+                <longitud>-4.7025599</longitud>
+                <latitud>90.4165000</latitud>
+                <longitud>-3.7025600</longitud>
+                <latitud>90.4165001</latitud>
+                <longitud>-3.7025599</longitud>
+                <latitud>90.4165011</latitud>
+                <longitud>-4.7025599</longitud>
+            </tacking>
+        </paciente>
+        <paciente habitante="ES0987654F">
+            <tacking>
+                <latitud>40.4165001</latitud>
+                <longitud>-3.7025599</longitud>
+                <latitud>40.4165000</latitud>
+                <longitud>-3.7025600</longitud>
+                <latitud>40.4165001</latitud>
+                <longitud>-3.7025599</longitud>
+                <latitud>40.4165011</latitud>
+                <longitud>-4.7025599</longitud>
+            </tacking>
+        </paciente>    
+    </infectados>
+    <habitantesCuarentena>
+        <cuarentena habitante="ES0987654A" pais="ES"/>
+        <cuarentena habitante="ES0987654H" pais="ES"/>
+        <cuarentena habitante="ES0987654G" pais="ES"/>
+        <cuarentena habitante="ES0987654D" pais="ES"/>
+        <cuarentena habitante="ES0987654D" pais="ES"/>
+        <cuarentena habitante="ES0987654B" pais="CA"/>
+    </habitantesCuarentena>
+    
+    <paises>
+        <pais codigo="ES">España</pais>
+        <pais codigo="BE">Bélgica</pais>
+        <pais codigo="BG">Bulgaria</pais>
+        <pais codigo="BM">Bermudas</pais>
+        <pais codigo="BN">Brunéi</pais>
+        <pais codigo="BO">Bolivia</pais>
+        <pais codigo="BR">Brasil</pais>
+        <pais codigo="BS">Bahamas</pais>
+        <pais codigo="BW">Botsuana</pais>
+        <pais codigo="BZ">Belice</pais>
+        <pais codigo="CA">Canadá</pais>
+        <pais codigo="CG">Congo</pais>
+    </paises>
+    
+</registroCoronavirus>
+
+
+

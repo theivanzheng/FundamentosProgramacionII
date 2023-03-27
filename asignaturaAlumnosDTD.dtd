@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT asignatura (nombreAsignatura, nCredito, curso, tipo, alumno+, profesor+)>
+<!ELEMENT nombreAsignatura (#PCDATA)>
+<!ELEMENT nCredito (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+
+<!ELEMENT alumno (nombre, apelllidos, nota?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos ( #PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+
+<!ELEMENT profesor (nombre, apellidos)>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="extraescolares" type="tExtraescolares">
+        <!-- Claves globales-->
+        <!--No hay dos asociaciones iguales-->
+        <xs:key name="codigoAsociacionKey">
+            <xs:selector xpath="asociaciones/asociacion"/>
+            <xs:field xpath="@id_asoc"/> <!--Lo que tengo que comprobar que sea unico-->
+        </xs:key>
+        
+         <xs:key name="codigoActividadKey">
+            <xs:selector xpath="actividades/actividad"/>
+            <xs:field xpath="@id_act"/> <!--Lo que tengo que comprobar que sea unico-->
+        </xs:key>
+        
+        <xs:key name="codigoAlumnosKey">
+            <xs:selector xpath="alumnos/alumnos"/>
+            <xs:field xpath="@expediente"/> <!--Lo que tengo que comprobar que sea unico-->
+        </xs:key>       
+        
+        
+    </xs:element>
+    
+    <xs:complexType name="tExtraescoalres">
+        <xs:sequence>
+            <xs:element name="asociaciones" type="tAsociaciones"/>
+            <xs:element name="actividades"  type="tActividades"/>
+            <xs:element name="alumnos"      type="tAlumnos"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tAsociaciones">
+        <xs:sequence>
+            <xs:element name="asociacion" type="tAsociacion" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tAsociacion">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="email" type="xs:tEmail"/>
+        </xs:sequence>
+        <xs:attribute name="id_asoc" type="xs:string" maxOccurs="unbounded"/>
+    </xs:complexType>
+
+    <xs:complexType name="tActividades">
+           <xs:sequence>
+            <xs:element name="actividad" type="tActividad" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tActividad">
+        <!--elementos-->
+        <xs:sequence>   
+            <xs:element name="nombre"   type="xs:string"/>
+            <xs:element name="nivel"    type="tNivel" minOccurs="0"/>
+            <xs:element name="precio"   type="xs:decimal" minOccurs="0"/>
+            <xs:element name="matricula" type="tExpediente" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="horario"  type="tHorario" maxOccurs="unbounded"/>
+        </xs:sequence>
+    <!--atributos-->
+        <xs:attribute name="id_asoc" type="tIdAsoc" use="required"/>
+        <xs:attribute name="id_act" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!--Defino restricciones de los atributos-->
+    <xs:simpleType name="tIdAsoc">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="as[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-].[a-zA-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tIdAct">
+         <xs:restriction base="xs:string">
+            <xs:pattern value="act[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tNivel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="infantil"/>
+            <xs:enumeration value="primaria"/> 
+            <xs:enumeration value="secundaria"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tDia">
+        <xs:restriction base="string">
+            <xs:pattern value="[Ll][unes]"/>
+            <xs:pattern value="[Ml][artes]"/>
+            <!--Seguir rellenando-->
+        </xs:restriction>   
+    </xs:simpleType>
+    <xs:simpleType name="tHora">
+        <xs:restriction base="xs:time">
+            <xs:minInclusive value="16:00:00"/> 
+            <xs:maxInclusive value="18:00:00"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tHorario">
+        <xs:sequence>
+            <xs:element name="dia" type="xs:string"/>
+            <xs:element name="hora" type="xs:time"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tAlumnos">
+         <xs:sequence>
+            <xs:element name="alumno" type="tAlumno" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tAlumno">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direccion" type="xs:string"/>
+            <xs:element name="telefono" type="xs:integer" maxOccurs="undounded"/> <!--hayq ue mirar que tenga solo 9 digitos-->
+            <xs:element name="curso" type="xs:integer"/>
+            <xs:element name="nivel" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="expediente" type="tExpediente" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="tExpediente">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>   
+</xs:schema>

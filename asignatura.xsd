@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="asignatura" type="tAsignaura"/>
+    
+    <xs:complexType name="tAsignaura">
+        <xs:sequence>
+            <xs:element name="nombreAsignatura" type="xs:string"/>
+            <xs:element name="nCreditos"   type="xs:integer"/>  
+            <xs:element name="curso"            type="tCurso"/> 
+            <xs:element name="tipo"            type="tTipo"/>
+            <xs:element name="alumnos"           type="tAlumno"      maxOccurs="unbounded"/>
+            <xs:element name="profesor"         type="tProfesor"    maxOccurs="unbounded"/>
+        </xs:sequence>
+        
+        <!-- Aquí van los atributos, pero como no hay no los pongo-->
+    </xs:complexType>  
+    
+    <xs:complexType name="tAlumno">
+        <xs:sequence>
+            <xs:element name="nombre"       type="xs:string" />
+            <xs:element name="apellidos"    type="xs:string" />
+            <xs:element name="nota"         type="xs:decimal" minOccurs="0"/> <!-- POnemos que es 0 porque así puede estar o no estar-->
+        </xs:sequence>
+    </xs:complexType>  
+    
+    <xs:complexType name="tProfesor">
+        <xs:sequence>
+            <xs:element name="nombre"       type="xs:string" />
+            <xs:element name="apellidos"    type="xs:string" />
+            <xs:element name="nota"         type="xs:decimal" /> <!-- Consideramos que es un real-->
+        </xs:sequence>
+    </xs:complexType>  
+    
+    <xs:simpleType name="tCurso">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/> 
+            <xs:maxINclusive value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+           
+    <xs:simpleType name="tTipo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="optativa"/>
+            <xs:enumeration value="obligatoria"/>
+            <xs:enumeration value="instrumental"/>
+        </xs:restriction>
+    </xs:simpleType>       
+    
+     <xs:simpleType name="tNota">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxinInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>  
+       
+</xs:schema>

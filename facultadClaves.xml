@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facultad SYSTEM "facultadClaves.dtd">
+
+<facultad>
+    <alumnosConjunto>
+           <alumno idExpediente="_12345">
+                <nombre>Antonio</nombre>
+                <apellidos>Martín Sánchez</apellidos>
+            </alumno>
+
+            <alumno idExpediente="_83751">
+                <nombre>Fernando</nombre>
+                <apellidos>Sánchez Pérez</apellidos>
+            </alumno>
+
+            <alumno idExpediente="_54321">
+                <nombre>Hector</nombre>
+                <apellidos>Sevillano Sánchez</apellidos>
+            </alumno>
+
+            <alumno idExpediente="_92541">
+                <nombre>Andrea</nombre>
+                <apellidos>Garzón Mesonero</apellidos>
+            </alumno>
+
+            <alumno idExpediente="_13579">
+                <nombre>Alejandro</nombre>
+                <apellidos>Serrano Pedraza</apellidos>
+            </alumno>  
+
+            <alumno idExpediente="_25791">
+                <nombre>Sebastián</nombre>
+                <apellidos>Velásquez Lozano</apellidos>
+            </alumno>   
+
+            <alumno idExpediente="_98765">
+                <nombre>Pablo</nombre>
+                <apellidos>Pérez Moralejo</apellidos>
+            </alumno>  
+
+            <alumno idExpediente="_87624">
+                <nombre>Lorenzo</nombre>
+                <apellidos>Sandoval Villanueva</apellidos>
+            </alumno>   
+
+            <alumno idExpediente="_87644">
+                <nombre>Elsa</nombre>
+                <apellidos>Pérez Núñez</apellidos>
+            </alumno>   
+
+    </alumnosConjunto>
+
+    <conjuntoProfesores> 
+        <profesor nif="_74838593Z">
+            <nombre>Lucía</nombre>
+            <apellidos>Martín Lozano</apellidos>
+        </profesor> 
+
+        <profesor nif="_47483924JD">
+            <nombre>Francisco Javier</nombre>
+            <apellidos>López Sánchez</apellidos>
+        </profesor>    
+
+        <profesor nif="_74838493Z">
+            <nombre>Isabel</nombre>
+            <apellidos>Santos García</apellidos>
+        </profesor>              
+    </conjuntoProfesores>
+
+    <asignaturasConjunto>
+        <asignatura idAsignatura="A463" profesor="_47483924JD">
+            <nombreAsignatura>Fundamentos de programación II</nombreAsignatura>
+            <nCreditos>6</nCreditos>
+            <curso>1</curso>
+            <tipo>obligatoria</tipo>
+            <conjuntoMatriculados>
+                <alumnoMatriculado idExpediente="_98765">
+                    <nota>9</nota>
+                </alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_25791">
+                    <nota>9</nota>
+                </alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_87624"></alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_83751"></alumnoMatriculado>
+            </conjuntoMatriculados>
+        </asignatura>
+
+         <asignatura idAsignatura="S327" profesor="_74838593Z">
+            <nombreAsignatura>Ingles</nombreAsignatura>
+            <nCreditos>6</nCreditos>
+            <curso>2</curso>
+            <tipo>obligatoria</tipo>
+
+            <conjuntoMatriculados>
+                <alumnoMatriculado idExpediente="_98765">
+                    <nota>9</nota>
+                </alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_25791">
+                    <nota>9</nota>
+                </alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_87624"></alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_83751"></alumnoMatriculado>
+                <alumnoMatriculado idExpediente="_13579">
+                    <nota>7</nota>
+                 </alumnoMatriculado>  
+                 <alumnoMatriculado idExpediente="_87624"></alumnoMatriculado>
+
+            </conjuntoMatriculados>
+        </asignatura>   
+
+    </asignaturasConjunto>
+
+</facultad>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libreria SYSTEM "libreria.dtd">
+
+ <libreria>  
+     
+     <editorial codEd="PLA1940">
+         <nombre>Planeta</nombre>
+         <web>www.planeta.com</web>    
+     </editorial>
+     <editorial codEd="UTO1990">
+         <nombre>Utopia Libris</nombre>
+         <web>www.utopia.com</web>    
+     </editorial>
+     <editorial codEd="SPR1920">
+         <nombre>Springer</nombre>
+         <web>www.springer.com</web>    
+     </editorial>
+     <editorial codEd="MAX2000">
+         <nombre>Maximo Potencial</nombre>
+         <web>www.maximoPotencial.com</web>    
+     </editorial>
+     
+     <autor1 codAutor="FERSAL">
+         <nombre>Fernando</nombre>
+         <apellidos>Salinero</apellidos>
+     </autor1>
+     <autor1 codAutor="JMAVIC">
+         <nombre>Jose Maria</nombre>
+         <apellidos>Vicedo</apellidos>
+     </autor1>
+     <autor1 codAutor="TZUSUN">
+         <nombre>Tzu</nombre>
+         <apellidos>Sun</apellidos>
+     </autor1>
+     <autor1 codAutor="MIGCER">
+         <nombre>Miguel</nombre>
+         <apellidos>Cervantes</apellidos>
+     </autor1>
+     
+     <libro codigoEditorial="PLA1940">
+         <ISBN>123456789</ISBN>
+         <autor>TZUSUN</autor>
+         <titulo>El arte de la guerra</titulo>
+         <precio>16.02</precio>
+         <unidades>5</unidades>
+         <digital></digital>    
+     </libro>
+     <libro codigoEditorial="UTO1990">
+         <ISBN>123456788</ISBN>
+         <autor>FERSAL</autor>
+         <titulo>La casa al revés</titulo>
+         <precio>13.5</precio>
+         <unidades>3</unidades>
+         <digital></digital>    
+     </libro>
+     <libro codigoEditorial="UTO1990">
+         <ISBN>123456787</ISBN>
+         <autor>FERSAL</autor>
+         <titulo>Story Coaching</titulo>
+         <precio>15.5</precio>
+         <unidades>20</unidades>   
+     </libro>
+     <libro codigoEditorial="MAX2000">
+         <ISBN>123456786</ISBN>
+         <autor>FERSAL</autor>
+         <autor>JMAVIC</autor>
+         <titulo>La vida en positivo</titulo>
+         <precio>13.5</precio>
+         <unidades>7</unidades>
+         <digital></digital>    
+     </libro>
+     <libro codigoEditorial="SPR1920">
+         <ISBN>123456780</ISBN>
+         <autor>MIGCER</autor>
+         <titulo>El Quijote</titulo>
+         <precio>19.5</precio>
+         <unidades>2</unidades>   
+     </libro>
+     
+
+</libreria>

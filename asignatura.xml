@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Almacenamos una asignatura
+-->
+<!--
+<!DOCTYPE asignatura SYSTEM "asignaturaAlumnosDTD.dtd">
+-->
+<asignatura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="asignatura.xsd">
+    <nombreAsignatura>Fundamentos de programación II</nombreAsignatura>
+    <nCreditos>6</nCreditos>
+    <curso>1</curso>
+    <tipo>obligatoria</tipo>
+    <alumno>
+        <nombre>Antonio</nombre>
+        <apellidos>Martín Sánchez</apellidos>
+        <nota>10</nota>
+    </alumno>
+    <alumno>
+        <nombre>María</nombre>
+        <apellidos>Martín Sánchez</apellidos>
+        <nota>8</nota>
+    </alumno>
+    <alumno>
+        <nombre>Lucas</nombre>
+        <apellidos>Martín Sánchez</apellidos>
+    </alumno>
+    <profesor>
+        <nombre>Encarna</nombre>
+        <apellidos>Beato Gutiérrez</apellidos>
+    </profesor>
+
+</asignatura>

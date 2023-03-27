@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT notas (nota*)>
+<!ELEMENT nota (titulo,cuerpo)>
+<!ELEMENT titulo (#PCDATA|n|c|s)*>
+<!ELEMENT cuerpo (#PCDATA|n|c|s)*>
+<!ELEMENT n (#PCDATA|c|s)*>
+<!ELEMENT c (#PCDATA|n|s)*>
+<!ELEMENT s (#PCDATA|n|c)*>
+
+<!ATTLIST titulo tipoLetra (Times|Calibri|Courier) #REQUIRED
+                 tamaño CDATA "11pt">
+<!ATTLIST cuerpo tipoLetra (Times|Calibri|Courier) #REQUIRED
+                 tamaño CDATA "11pt">
+
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+

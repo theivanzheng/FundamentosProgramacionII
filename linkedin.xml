@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<linkedin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="linkedin.xsd">
+    <usuario id="abc111">
+        <nombre>Alejandro Benito</nombre>
+        <puesto departamento="gerencia">CEO</puesto>
+        <contactos>
+            <contacto userid="asd123"/>
+            <contacto userid="qwe123"/>
+            <contacto userid="zxc222"/>
+        </contactos>
+        <mensajes>
+            <mensaje usuario="asd123">
+                <fecha>2016-04-17</fecha>
+                Buenos días que tal por aquí?
+            </mensaje>
+            <mensaje usuario="asd123">
+                <fecha>2016-04-18</fecha>
+                Holaaaa
+            </mensaje>
+            <mensaje usuario="asd123">
+                <fecha>2016-04-19</fecha>
+                Vas a la empresa mañana?
+            </mensaje>
+            <mensaje usuario="asd123">
+                <fecha>2016-04-19</fecha>
+               Necesito la información
+            </mensaje>
+        </mensajes>
+        
+    </usuario>
+    <usuario id="asd123">
+        <nombre>Alicia Benito</nombre>
+        <puesto>estudiante</puesto>
+        <contactos>
+            <contacto userid="qwe123"/>
+            <contacto userid="zxc222"/>
+        </contactos>
+        <mensajes>
+            <mensaje usuario="qwe123">
+                <fecha>2016-05-17</fecha>
+                Buenos días que tal por aquí?
+            </mensaje>
+            <mensaje usuario="qwe123">
+                <fecha>2016-05-18</fecha>
+                Holaaaa
+            </mensaje>         
+        </mensajes>
+    </usuario>
+     <usuario id="qwe123">
+        <nombre>Alejandro Benito</nombre>
+        <puesto departamento="gerencia">Gerente</puesto>
+        <contactos>
+            <contacto userid="asd123"/>
+            <contacto userid="zxc222"/>
+        </contactos>
+        <mensajes>
+            <mensaje usuario="asd123">
+                <fecha>2016-06-17</fecha>
+                Buenos días que tal por aquí?
+            </mensaje>
+            <mensaje usuario="zxc222">
+                <fecha>2016-06-18</fecha>
+                Necesito tu CV
+            </mensaje>         
+        </mensajes>
+    </usuario>
+     <usuario id="zxc222">
+        <nombre>Zara Benito</nombre>
+        <puesto departamento="financiero">Director Comercial</puesto>
+        <contactos>
+            <contacto userid="asd123"/>
+        </contactos>
+    </usuario>
+    
+</linkedin>
+

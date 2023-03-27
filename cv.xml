@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+
+<cv nif="_07985623R">
+    <publicaciones>
+        <publicacion codigo="iwann1">
+            <titulo>Proyecto RICE</titulo>
+            <autor principal="SI">
+                <apellido1>Martin</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Antonia</nombre>
+            </autor>
+            <autor>
+                <apellido1>GarcÃ­a</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Laura</nombre>
+            </autor>
+            <ISBN-ISSN>84-7299-561-5</ISBN-ISSN>
+            <anho>2009</anho>
+        </publicacion>
+        <publicacion codigo="iwann2">
+            <titulo>World scientific</titulo>
+            <autor principal="SI">
+                <apellido1>MartÃ­n</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Antonia</nombre>
+            </autor>
+            <autor>
+                <apellido1>GarcÃ­a</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Laura</nombre>
+            </autor>
+            <autor>
+                <apellido1>Smith</apellido1>
+                <nombre>John</nombre>
+            </autor>
+            <ISBN-ISSN>84-7299-561-9</ISBN-ISSN>
+            <anho>2010</anho>
+        </publicacion>
+        <publicacion>
+            <titulo>Internet of things</titulo>
+            <autor principal="SI">
+                <apellido1>Martin</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Antonia</nombre>
+            </autor>
+            <autor>
+                <apellido1>Gomez</apellido1>
+                <apellido2>Gutierrez</apellido2>
+                <nombre>Antonio</nombre>
+            </autor>
+            <ISBN-ISSN>84-7299-333-5</ISBN-ISSN>
+            <anho>2012</anho>
+        </publicacion>
+    </publicaciones>
+    <congresos>
+        <congreso tipo="internacional" codigo="iwann1">
+            <nombreCongreso>IWANN</nombreCongreso>
+            <fechaInicial>02-junio-2009</fechaInicial>
+            <fechaFinal>10-junio-2009</fechaFinal>
+        </congreso>
+                <congreso tipo="internacional" codigo="iwann2">
+            <nombreCongreso>IWANN</nombreCongreso>
+            <fechaInicial>02-junio-2010</fechaInicial>
+            <fechaFinal>10-junio-2010</fechaFinal>
+        </congreso>
+            <congreso tipo="internacional" codigo="paams1">
+            <nombreCongreso>PAAMS</nombreCongreso>
+            <fechaInicial>02-julio-2009</fechaInicial>
+            <fechaFinal>10-julio-2009</fechaFinal>
+        </congreso>
+            <congreso tipo="nacional" codigo="jisbd">
+            <nombreCongreso>JISBD</nombreCongreso>
+            <fechaInicial>02-julio-2014</fechaInicial>
+            <fechaFinal>10-julio-2014</fechaFinal>
+        </congreso>
+        <congreso codigo="SAC">
+            <nombreCongreso>JISBD</nombreCongreso>
+            <fechaInicial>02-febrero-2015</fechaInicial>
+            <fechaFinal>10-febrero-2015</fechaFinal>
+        </congreso>
+    </congresos>
+    <otrosMeritos>
+        <merito>
+            Miembro del Comite de calidad de la UPSA <anho>2009</anho>
+        </merito>
+        <merito>Socio fundador de la empresa UPSATIC <anho>2012</anho>
+        </merito>
+        <merito>
+            Revisor de ACM
+        </merito>
+    </otrosMeritos>
+    
+</cv>

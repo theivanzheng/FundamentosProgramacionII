@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clinica
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="clinicaClaves.xsd">
+	<medico nColegiado="P2548" especialidad="odontologia">
+		<nombre>Pepe</nombre>
+		<turno>
+			<fecha>2013-05-05</fecha>
+			<hora_ini>08:00:00</hora_ini>
+			<hora_fin>15:00:00</hora_fin>
+			<enfermero>Juan</enfermero>
+			<consulta motivo="revision">
+				<hora_cons>09:15:00</hora_cons>
+				<paciente_consulta>0088996987</paciente_consulta>
+			</consulta>
+			<consulta motivo="empaste pieza D2">
+				<hora_cons>11:00:00</hora_cons>
+				<paciente_consulta>0115660000</paciente_consulta>
+                                <receta>
+					<medicamento>penicilina</medicamento>
+					<posologia>cada 8 horas</posologia>
+				</receta>
+				<importe>60</importe>
+			</consulta>
+		</turno>
+		<turno>
+			<fecha>2013-05-06</fecha>
+			<hora_ini>16:00:00</hora_ini>
+			<hora_fin>17:00:00</hora_fin>
+			<enfermero>Maria</enfermero>
+			<consulta motivo="desvitalizacion pieza M32">
+				<hora_cons>16:20:00</hora_cons>
+				<paciente_consulta>0088996987</paciente_consulta>
+                                <receta>
+					<medicamento>paracetamol</medicamento>
+					<posologia>cada 8 horas</posologia>
+				</receta>
+				<receta>
+					<medicamento>ibuprofeno</medicamento>
+					<posologia>cada 8 horas</posologia>
+				</receta>
+				<importe>50</importe>
+			</consulta>
+		</turno>
+	</medico>
+	<medico nColegiado="N2548" especialidad="cardiologia">
+		<nombre>Nuria</nombre>
+		<turno>
+			<fecha>2013-03-05</fecha>
+			<hora_ini>08:00:00</hora_ini>
+			<hora_fin>15:00:00</hora_fin>
+			<enfermero>Esteban</enfermero>
+			<consulta motivo="revision">
+				<hora_cons>12:00:00</hora_cons>
+				<paciente_consulta>0088996987</paciente_consulta>
+                                <importe>100</importe>
+			</consulta>
+			<consulta motivo="bypass">
+				<hora_cons>13:00:00</hora_cons>
+				<paciente_consulta>9087654654</paciente_consulta>
+                                <receta>
+					<medicamento>adiro</medicamento>
+					<posologia>uno al dia</posologia>
+				</receta>
+				<importe>1600.5</importe>
+			</consulta>
+		</turno>
+		<turno>
+			<fecha>2013-03-05</fecha>
+			<hora_ini>16:00:00</hora_ini>
+			<hora_fin>17:00:00</hora_fin>
+			<enfermero>Maria</enfermero>
+			<consulta motivo="electrocardiograma">
+				<hora_cons>17:10:00</hora_cons>
+				<paciente_consulta>0088996987</paciente_consulta>
+                                <receta>
+					<medicamento>heparina</medicamento>
+					<posologia>uno al dia</posologia>
+				</receta>
+				<importe>50</importe>
+			</consulta>
+		</turno>
+	</medico>
+        <paciente>
+		<nss>0088996987</nss>
+		<nombre>Maria</nombre>
+	</paciente>
+        <paciente>
+		<nss>0115660000</nss>
+		<nombre>Rosa</nombre>
+	</paciente>
+        <paciente>
+		<nss>9087654654</nss>
+		<nombre>Jorge</nombre>
+	</paciente>
+</clinica>

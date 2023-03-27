@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE reservas SYSTEM "reservas.dtd">
+
+
+
+<reservas>
+    <reserva user="ebg1988" hotel="SA123">
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>
+        <reserva user="ebg1988" hotel="SA123">
+        <fecha_ini>2017-02-05</fecha_ini>
+        <fecha_fin>2017-02-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>
+        <reserva user="rbg1988" hotel="ZA123">
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="1"/>
+            <niños/>
+        </huespedes>
+    </reserva>
+        <reserva user="mgs1988" hotel="LE123">
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>
+    
+    <usuario login="ebg1988">
+        <nombre>Eugenio Barrios</nombre>
+        <pago>
+            <tarjeta mes="12" anho="2018">2134567890</tarjeta>
+            <tarjeta mes="1" anho="2020">2134567330</tarjeta>
+            <paypal usuario="ebg19" password="ebg1988_A"/>
+        </pago>
+    </usuario>
+    <usuario login="rbg1988">
+        <nombre>Ricardo Barrio</nombre>
+        <pago>
+            <tarjeta mes="12" anho="2019">2144467890</tarjeta>          
+        </pago>
+    </usuario>
+    <usuario login="mgs1988">
+        <nombre>Maria Garcia</nombre>
+        <pago>
+            <paypal usuario="mgs678" password="uno-1988_B"/>
+        </pago>
+    </usuario>
+    
+    <hotel codigo="SA123" estrellas="5">
+        <ciudad>Salamanca</ciudad>
+        <direccion>Plaza Mayor 25</direccion>
+    </hotel>
+    <hotel codigo="ZA123" estrellas="5">
+        <ciudad>Zamora</ciudad>
+        <direccion>Plaza Mayor 25</direccion>
+    </hotel>
+    <hotel codigo="LE123" estrellas="5">
+        <ciudad>Leon</ciudad>
+        <direccion>Plaza Mayor 25</direccion>
+    </hotel>
+    
+</reservas>

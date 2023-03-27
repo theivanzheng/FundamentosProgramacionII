@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT informacionWeb (productos, clientes, compras)>
+    <!ELEMENT productos (producto+)>
+       <!ELEMENT producto (descripcion, color, almacen)>
+            <!ELEMENT descripcion (#PCDATA| importante)*>
+                <!ELEMENT importante (#PCDATA)>
+            <!ELEMENT color (#PCDATA)>
+            <!ELEMENT almacen (stock*)>
+                <!ELEMENT stock EMPTY>
+    
+    <!ELEMENT clientes (cliente*)>
+        <!ELEMENT cliente (nombre, direccion)> 
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT direccion (#PCDATA)>
+
+    <!ELEMENT compras (compra*)>
+        <!ELEMENT compra EMPTY>
+
+<!ATTLIST producto codigo ID #REQUIRED>
+<!ATTLIST cliente login ID #REQUIRED>
+<!ATTLIST cliente password CDATA #REQUIRED>
+<!ATTLIST cliente premium (si|no) "no">
+
+<!ATTLIST stock talla (XS|S|M|L|XL) #REQUIRED>
+<!ATTLIST stock unidades CDATA #REQUIRED>
+
+<!ATTLIST compra producto IDREF #REQUIRED>
+<!ATTLIST compra cliente IDREF #REQUIRED>
+<!ATTLIST compra unidades CDATA #IMPLIED>
+<!ATTLIST compra talla (XS|S|M|L|XL) #REQUIRED>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT libreria ( editorial+, autor1+, libro+)>
+    <!ELEMENT editorial (nombre, web)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT web (#PCDATA)>
+    
+    <!ELEMENT autor1 (nombre, apellidos)>
+        <!ELEMENT apellidos (#PCDATA)>
+
+    <!ELEMENT libro (ISBN, autor+, titulo, precio, unidades, digital?)>
+        <!ELEMENT ISBN (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        <!ELEMENT unidades (#PCDATA)>
+        <!ELEMENT digital (#PCDATA)>
+
+
+<!ATTLIST editorial codEd ID #REQUIRED>
+<!ATTLIST autor1 codAutor ID #REQUIRED>
+<!ATTLIST libro codigoEditorial IDREF #REQUIRED>
+
+

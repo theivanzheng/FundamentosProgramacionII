@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Almacenamos una asignatura
+-->
+<!DOCTYPE facultad SYSTEM "facultad.dtd">
+
+<facultad>
+    <asignatura idAsignatura ="A234">
+        <nombreAsignatura>Fundamentos de programación II</nombreAsignatura>
+        <nCreditos>6</nCreditos>
+        <curso>1</curso>
+        <tipo>obligatoria</tipo>
+
+        <!--_____________________________________-->
+        <alumno idExpediente="_12345">
+            <nombre>Antonio</nombre>
+            <apellidos>Martín Sánchez</apellidos>
+            <nota>9</nota>
+        </alumno>
+
+        <alumno idExpediente="_54321">
+            <nombre>Hector</nombre>
+            <apellidos>Sevillano Sánchez</apellidos>
+            <nota>10</nota>
+        </alumno>
+
+        <alumno idExpediente="_92541">
+            <nombre>Andrea</nombre>
+            <apellidos>Garzón Mesonero</apellidos>
+            <nota>8</nota>
+        </alumno>
+        
+        <alumno idExpediente="_13579">
+            <nombre>Alejandro</nombre>
+            <apellidos>Serrano Pedraza</apellidos>
+            <nota>7</nota>
+        </alumno>  
+
+        <alumno idExpediente="_25791">
+            <nombre>Sebastián</nombre>
+            <apellidos>Velásquez Lozano</apellidos>
+            <nota>8</nota>
+        </alumno>   
+
+        <alumno idExpediente="_98765">
+            <nombre>Pablo</nombre>
+            <apellidos>Pérez Moralejo</apellidos>
+            <nota>10</nota>
+        </alumno>  
+
+        <alumno idExpediente="_87624">
+            <nombre>Lorenzo</nombre>
+            <apellidos>Sandoval Villanueva</apellidos>
+            <nota>10</nota>
+        </alumno>   
+
+     <!--_____________________________________-->
+
+        <profesor nif="_12345678F">
+            <nombre>Encarna</nombre>
+            <apellidos>Beato Gutiérrez</apellidos>
+        </profesor> 
+
+    </asignatura>
+    
+    <asignatura idAsignatura ="D546">
+        <nombreAsignatura>Lenguajes de programación</nombreAsignatura>
+        <nCreditos>6</nCreditos>
+        <curso>1</curso>
+        <tipo>optativa</tipo>
+
+        <!--_____________________________________-->
+        <alumno idExpediente="_12345">
+            <nombre>Antonio</nombre>
+            <apellidos>Martín Sánchez</apellidos>
+            <nota>9</nota>
+        </alumno>
+
+        <alumno idExpediente="_83751">
+            <nombre>Fernando</nombre>
+            <apellidos>Sánchez Pérez</apellidos>
+            <nota>7</nota>
+        </alumno>
+
+        <alumno idExpediente="_13579">
+            <nombre>Alejandro</nombre>
+            <apellidos>Serrano Pedraza</apellidos>
+            <nota>7</nota>
+        </alumno>  
+
+        <alumno idExpediente="_25791">
+            <nombre>Sebastián</nombre>
+            <apellidos>Velásquez Lozano</apellidos>
+            <nota>8</nota>
+        </alumno>   
+
+        <alumno idExpediente="_98765">
+            <nombre>Pablo</nombre>
+            <apellidos>Pérez Moralejo</apellidos>
+            <nota>10</nota>
+        </alumno>  
+
+        <alumno idExpediente="_87624">
+            <nombre>Elsa</nombre>
+            <apellidos>Pérez Núñez</apellidos>
+            <nota>10</nota>
+        </alumno>   
+
+     <!--_____________________________________-->
+
+        <profesor nif="_74838593Z">
+            <nombre>Lucía</nombre>
+            <apellidos>Martín Lozano</apellidos>
+        </profesor> 
+        
+        <profesor nif="_47483924JD">
+            <nombre>Francisco Javier</nombre>
+            <apellidos>López Sánchez</apellidos>
+        </profesor> 
+        
+
+    </asignatura>
+    
+    <asignatura idAsignatura ="S327">
+        <nombreAsignatura>Ingles</nombreAsignatura>
+        <nCreditos>6</nCreditos>
+        <curso>2</curso>
+        <tipo>obligatoria</tipo>
+
+        <!--_____________________________________-->
+        <alumno idExpediente="_12345">
+            <nombre>Antonio</nombre>
+            <apellidos>Martín Sánchez</apellidos>
+            <nota>9</nota>
+        </alumno>
+
+        <alumno idExpediente="_83751">
+            <nombre>Fernando</nombre>
+            <apellidos>Sánchez Pérez</apellidos>
+            <nota>7</nota>
+        </alumno>
+
+        <alumno idExpediente="_13579">
+            <nombre>Alejandro</nombre>
+            <apellidos>Serrano Pedraza</apellidos>
+            <nota>7</nota>
+        </alumno>  
+
+       
+        <alumno idExpediente="_87624">
+            <nombre>Elsa</nombre>
+            <apellidos>Pérez Núñez</apellidos>
+            <nota>10</nota>
+        </alumno>   
+
+     <!--_____________________________________-->
+
+        <profesor nif="_74838593Z>">
+            <nombre>Isabel</nombre>
+            <apellidos>Santos García</apellidos>
+        </profesor> 
+        
+    </asignatura>
+</facultad>

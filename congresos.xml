@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE congreso SYSTEM "congresos.dtd">
+    <congreso codigo="ACM2017" inauguracion="2017-03-21">
+        <fecha chairman="bbg1988">
+            <ponencia autores="bbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:00</hora>
+            </ponencia>
+            <ponencia autores="dbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>11:00</hora>
+            </ponencia>
+            <ponencia autores="ebg1988 fbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:30</hora>
+            </ponencia>
+            <ponencia autores="hbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>10:00</hora>
+            </ponencia>
+        </fecha>
+        <fecha date="2017-03-22" chairman="ebg1988">
+            <ponencia autores="ebg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:00</hora>
+            </ponencia>
+            <ponencia autores="ebg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>11:00</hora>
+            </ponencia>
+            <ponencia autores="ebg1988 cbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:30</hora>
+            </ponencia>
+            <ponencia autores="abg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>10:00</hora>
+            </ponencia>
+        </fecha>
+        <fecha date="2017-03-23" chairman="fbg1988">
+            <ponencia autores="hbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:00</hora>
+            </ponencia>
+            <ponencia autores="ebg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>11:00</hora>
+            </ponencia>
+            <ponencia autores="fbg1988 abg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>9:30</hora>
+            </ponencia>
+            <ponencia autores="gbg1988">
+                <titulo>El genoma humano</titulo> 
+                <hora>10:00</hora>
+            </ponencia>
+        </fecha>
+        <asistente usuario="ebg1988" password="12345678" chairman="si">
+            <centroTrabajo centro="UPSA"/>
+            <nombre>Eugenio Barbosa</nombre>
+            <email>ebg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="abg1988" password="12345678">
+            <nombre>Antonio Barbosa</nombre>
+            <email>abg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="bbg1988" chairman="si">
+            <centroTrabajo centro="UVA"/>
+            <nombre>Beatriz Barbosa</nombre>
+            <email>bbg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="cbg1988" password="12345678" chairman="no">
+            <nombre>Carla Barbosa</nombre>
+            <email>cbg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="dbg1988" password="12345678" chairman="no">
+            <nombre>David Barbosa</nombre>
+            <email>dbg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="fbg1988" password="12345678" chairman="si">
+            <centroTrabajo centro="UPSA"/>
+            <nombre>Francisco Barbosa</nombre>
+            <email>fbg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="gbg1988" password="12345678" chairman="no">
+            <nombre>Gonzalo Barbosa</nombre>
+            <email>gbg1988@gmail.com</email>
+        </asistente>
+        <asistente usuario="hbg1988" password="12345678">
+            <nombre>Hugo Barbosa</nombre>
+            <email>hbg1988@gmail.com</email>
+        </asistente>
+        <trabajo nombreCorto="UPSA" tipo="universidad">Universidad Pontificia de Salamanca</trabajo>
+        <trabajo nombreCorto="UVA">Universidad de Valladolid</trabajo>
+        
+    </congreso>
+    
+    

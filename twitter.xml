@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<twitterUsers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="twitter.xsd">
+
+    <twitter userCod="000ebe">
+        <fechaInscripcion>2020-01-12</fechaInscripcion>
+        <usuario>@ebeatogu</usuario>
+        <descripcion>Profesora de la UPSA</descripcion>
+        <followers>
+            <user>@upsa</user>
+        </followers>
+        <following>
+            <user>@elMundo</user>
+            <user>@elPais</user>
+            <user>@abc</user>
+            <user>@upsa</user>
+        </following>
+        <tweets numero="3">
+            <tweet>Buenos días</tweet>
+            <tweet>La tecnología lo cambiará todo<imagen>tech.jpg</imagen>
+            </tweet>
+            <tweet>
+                <mencion>@elMundo</mencion> muy interesante</tweet>
+        </tweets>
+    </twitter>
+    <twitter userCod="001ups">
+        <fechaInscripcion>2020-01-12</fechaInscripcion>
+        <usuario>@upsa</usuario>
+        <descripcion>Universidad Pontificia</descripcion>
+        <followers>
+            <user>@ebeatogu</user>
+        </followers>
+        <following>
+            <user>@ebeatogu</user>
+        </following>
+        <tweets numero="3">
+            <tweet>Buenos días</tweet>
+            <tweet>La tecnología lo cambiará todo</tweet>
+            <tweet>
+                <mencion>@ebeatogu</mencion> <mencion>@elMundo</mencion>muy interesante</tweet>
+        </tweets>
+    </twitter>
+    <twitter userCod="002elP">
+        <fechaInscripcion>2010-01-20</fechaInscripcion>
+        <usuario>@elPais</usuario>
+        <descripcion>Periodico español</descripcion>
+        <followers>
+            <user>@ebeatogu</user>
+        </followers>
+        <tweets numero="3">
+            <tweet>Buenos días</tweet>
+            <tweet>La tecnología lo cambiará todo</tweet>
+            <tweet><mencion>@ebeatogu</mencion> muy interesante</tweet>
+        </tweets>
+    </twitter>
+   <twitter userCod="003elM">
+        <fechaInscripcion>2010-01-20</fechaInscripcion>
+        <usuario>@elMundo</usuario>
+        <descripcion>Periodico español</descripcion>
+        <followers>
+            <user>@ebeatogu</user>
+        </followers>
+        <tweets numero="3">
+            <tweet>Buenos días</tweet>
+            <tweet>La tecnología lo cambiará todo</tweet>
+            <tweet><mencion>@ebeatogu</mencion> muy interesantee</tweet>
+        </tweets>
+    </twitter>    
+    <twitter userCod="004abc">
+        <fechaInscripcion>2010-01-20</fechaInscripcion>
+        <usuario>@abc</usuario>
+        <descripcion>Periodico español</descripcion>
+        <tweets numero="3">
+            <tweet>Buenos días <imagen>amanecer.jpg</imagen><mencion>@ebeatogu</mencion>
+            </tweet>
+            <tweet>La tecnología lo cambiará todo</tweet>
+            <tweet><mencion>@ebeatogu</mencion> muy interesante</tweet>
+        </tweets>
+    </twitter>     
+    
+</twitterUsers>
+

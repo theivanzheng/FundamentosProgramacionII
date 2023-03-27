@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="informacionWeb" type="tInformacionWeb">
+    <!--Claves globales-->
+    <xs:key name="codigoProductoKey">
+        <xs:selector xpath="productos/producto"/>
+        <xs:field xpath="@codigo"/>  
+    </xs:key>
+    
+    <xs:key name="codigoClienteKey">
+        <xs:selector xpath="clientes/cliente"/>
+        <xs:field xpath="@login"/>  
+    </xs:key>
+    <xs:keyref name="codigoProductoCompraKey" refer="codigoProductoKey">
+        <xs:selector xpath="compras/compra"/>
+        <xs:field xpath="@producto"/>  
+    </xs:keyref>
+    
+    <xs:keyref name="clienteCompraKey" refer="codigoClienteKey">
+        <xs:selector xpath="compras/compra"/>
+        <xs:field xpath="@cliente"/>  
+    </xs:keyref>   
+    
+    <xs:key name="clienteCompraRepetidaKeyref">
+        <xs:selector xpath="compras/compra"/>
+        <xs:field xpath="@cliente"/>  
+        <xs:field xpath="@producto"/>  
+        <xs:field xpath="@talla"/>  
+    </xs:key>
+    
+    </xs:element>
+
+
+    <!--Rama principal-->
+    <xs:complexType name="tInformacionWeb">
+        <xs:sequence>
+            <xs:element name="productos" type="tProductos" minOccurs="1"/>
+            <xs:element name="clientes" type="tClientes"/>
+            <xs:element name="compras" type="tCompras"/> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!--Rama de producto-->
+    <xs:complexType name="tProductos">
+        <xs:sequence>
+            <xs:element name="producto" type="tProducto"  maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tProducto">
+        <xs:sequence>
+            <xs:element name="descripcion" type="tDescripcion"/>
+            <xs:element name="color" type="xs:string"/>
+            <xs:element name="almacen" type="tAlmacen">
+                 <xs:key name="tipoTallasKey">
+                 <xs:selector xpath="./stock"/>
+                <xs:field xpath="@talla"/>  
+              </xs:key>
+            </xs:element>
+        </xs:sequence>
+        <!--Artibutos-->
+        <xs:attribute name="codigo" type="tCodigo" use="required"/>
+        
+
+    </xs:complexType>
+
+    <xs:complexType name="tDescripcion" mixed="true">
+        <xs:sequence>
+            <xs:element name="importante" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+
+    </xs:complexType>
+    <xs:simpleType name="tCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]{3}[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tAlmacen">
+        <xs:sequence>
+            <xs:element name="stock" type="tStock" maxOccurs="unbounded" minOccurs="0">
+            
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tStock">
+        <xs:attribute name="talla" type="tTalla" use="required"/>
+        <xs:attribute name="unidades" type="xs:integer"/>
+    </xs:complexType>
+    <xs:simpleType name="tTalla">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="XS"/>
+            <xs:enumeration value="S"/>  
+            <xs:enumeration value="M"/>  
+            <xs:enumeration value="L"/>  
+            <xs:enumeration value="XL"/>   
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!--Rama de clientes-->
+    <xs:complexType name="tClientes">
+        <xs:sequence>
+            <xs:element name="cliente" type="tCliente" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tCliente">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direccion" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="login" type="tLogin" use="required"/>
+        <xs:attribute name="password" type="xs:string" use="required"/>
+        <xs:attribute name="premium" type="xs:string" fixed="si"/>
+        
+    </xs:complexType>
+    <xs:simpleType name="tLogin">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+   <!--Rama de clientes-->
+   
+    <xs:complexType name="tCompras">
+        <xs:sequence>
+            <xs:element name="compra" type="tCompra" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tCompra">
+        <xs:attribute name="producto" type="xs:string" use="required"/>
+        <xs:attribute name="cliente" type="xs:string" use="required"/>
+        <xs:attribute name="unidades" type="xs:integer"/>
+        <xs:attribute name="talla" type="xs:string" use="required"/>
+    </xs:complexType>    
+    
+</xs:schema>

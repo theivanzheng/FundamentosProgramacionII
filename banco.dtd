@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--SOLO ELEMENTOSS-->
+<!ELEMENT __ROOT__ ANY>
+
+<!ELEMENT banco (nombre, cliente+, cuenta+)>
+<!ELEMENT nombre (#PCDATA)> <!--elemento sólo contiene texto-->
+
+<!ELEMENT cliente (nombre,tarjeta*)>
+<!ELEMENT tarjeta (numero,fechaCaducidad,credito)>
+<!ELEMENT numero (#PCDATA)> 
+<!ELEMENT fechaCaducidad (año,mes)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT credito (#PCDATA)>
+
+<!ELEMENT cuenta (saldo, tarjetaCredito? ,movimiento*)>
+<!ELEMENT saldo (#PCDATA)>
+<!ELEMENT tarjetaCredito (#PCDATA)>
+<!ELEMENT movimiento (fecha,cantidad)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!--SOLO ATRIBUTOS-->
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+
+<!ATTLIST cliente idCliente ID #REQUIRED>
+<!ATTLIST tarjeta tipo (Visa|MasterCard|AmericanExpress) "Visa">
+<!ATTLIST cuenta titulares IDREFS #REQUIRED>
+
+
+
+
+
+
+
+
+
+

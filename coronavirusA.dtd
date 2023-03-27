@@ -1,0 +1,37 @@
+
+<!ELEMENT sanidadSpain (habitantes, infectados, habitantesCuarentena, paises)>
+
+<!ELEMENT habitantes (habitante+)>
+    <!ELEMENT habitante (nombre, apellidos+, fechaNacimiento, lugarResidencia)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT fechaNacimiento (#PCDATA)>
+        <!ELEMENT lugarResidencia (#PCDATA)>
+        
+    <!ELEMENT infectados (paciente*)>
+        <!ELEMENT paciente (tacking)>
+            <!ELEMENT tacking (latitud,longitud)*> <!--Considero que puede no haber acudido a ningun centro-->
+                 <!ELEMENT latitud (#PCDATA)>
+                 <!ELEMENT longitud (#PCDATA)>
+    <!ELEMENT habitantesCuarentena (cuarentena*)>
+        <!ELEMENT cuarentena EMPTY>
+        
+    <!ELEMENT paises (pais+)>
+        <!ELEMENT pais (#PCDATA)>
+
+
+           
+<!ATTLIST habitante codigoHabitante ID #REQUIRED>
+<!ATTLIST habitante nacionalidad CDATA #REQUIRED>
+<!ATTLIST habitante riesgo CDATA #IMPLIED>
+
+<!ATTLIST paciente habitante IDREF #REQUIRED>
+<!ATTLIST paciente infectado (SI|NO) #IMPLIED>
+
+<!ATTLIST cuarentena habitante IDREF #REQUIRED>
+<!ATTLIST cuarentena pais IDREF #REQUIRED>
+
+
+<!ATTLIST pais codigo ID #REQUIRED>
+
+

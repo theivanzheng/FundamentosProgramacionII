@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT __ROOT__ ANY>
+<!--SOLO ELEMENTOSS-->
+
+<!ELEMENT facultad (asignatura*)>
+<!ELEMENT asignatura (nombreAsignatura, nCreditos,curso,tipo,alumno*,profesor+)>
+<!ELEMENT nombreAsignatura (#PCDATA)>
+<!ELEMENT nCreditos (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+
+<!ELEMENT alumno (nombre,apellidos,nota?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+
+
+<!ELEMENT profesor (nombre,apellidos)>
+
+<!--SOLO ATRIBUTOS-->
+
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+<!ATTLIST asignatura idAsignatura CDATA #REQUIRED>
+<!ATTLIST alumno idExpediente CDATA #REQUIRED>
+<!ATTLIST profesor nif CDATA #REQUIRED>
+
+
+
+
+
+
+
+
+
+
+

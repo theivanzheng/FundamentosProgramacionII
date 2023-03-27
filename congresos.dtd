@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT congreso (fecha+, asistente+, trabajo*)>
+    <!ELEMENT fecha (ponencia+)>
+        <!ELEMENT ponencia (titulo, hora)>
+            <!ELEMENT titulo (#PCDATA)>
+            <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT asistente (centroTrabajo?, nombre, email)>
+        <!ELEMENT centroTrabajo EMPTY>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+    <!ELEMENT trabajo (#PCDATA)>
+        
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+
+<!ATTLIST  congreso codigo ID #REQUIRED>
+<!ATTLIST  congreso inauguracion CDATA #REQUIRED>
+<!ATTLIST  fecha date  CDATA #IMPLIED>
+<!ATTLIST  fecha chairman IDREF #REQUIRED>
+<!ATTLIST  ponencia autores IDREFS #REQUIRED>
+<!ATTLIST  asistente usuario ID #REQUIRED>
+<!ATTLIST  asistente password CDATA #IMPLIED>
+<!ATTLIST  asistente chairman (si|no) "no" >
+<!ATTLIST  centroTrabajo centro CDATA #REQUIRED>
+<!ATTLIST  trabajo nombreCorto ID #REQUIRED>
+<!ATTLIST  trabajo tipo CDATA "otro">
+
+

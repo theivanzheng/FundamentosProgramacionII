@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extraescolares>
+	<asociaciones>
+		<asociacion id_asoc="as01">
+			<nombre>APA</nombre>
+			<email>apacole@yahoo.com</email>
+		</asociacion>
+		<asociacion id_asoc="as02">
+			<nombre>Cole</nombre>
+			<email>cole@gmail.com</email>
+		</asociacion>
+		<asociacion id_asoc="as03">
+			<nombre>Activa</nombre>
+			<email>cole_act@gmail.com</email>
+		</asociacion>
+	</asociaciones>
+	<actividades>
+		<actividad id_asoc="as01" id_act="act01">
+			<nombre>Cuenta Cuentos</nombre>
+			<nivel>infantil</nivel>
+			<matricula>e00001</matricula>
+			<matricula>e12345</matricula>
+			<horario>
+				<dia>lunes</dia>
+				<hora>16:00:00</hora>
+			</horario>
+		</actividad>
+		<actividad id_asoc="as02" id_act="act02">
+			<nombre>Ballet</nombre>
+			<nivel>primaria</nivel>
+			<precio>10</precio>
+			<horario>
+				<dia>miercoles</dia>
+				<hora>16:30:00</hora>
+			</horario>
+		</actividad>
+		<actividad id_asoc="as01" id_act="act03">
+			<nombre>Música</nombre>
+			<precio>10</precio>
+			<matricula>e67890</matricula>
+			<matricula>e12345</matricula>
+			<matricula>e00001</matricula>
+			<horario>
+				<dia>martes</dia>
+				<hora>17:00:00</hora>
+			</horario>
+		</actividad>
+		<actividad id_asoc="as03" id_act="act04">
+			<nombre>Inglés</nombre>
+			<precio>50</precio>
+			<matricula>e67890</matricula>
+			<horario>
+				<dia>martes</dia>
+				<hora>16:00:00</hora>
+			</horario>
+			<horario>
+				<dia>jueves</dia>
+				<hora>16:00:00</hora>
+			</horario>
+		</actividad>
+	</actividades>
+
+	<alumnos>
+		<alumno expediente="e12345">
+			<nombre>Pepe</nombre>
+			<direccion>Avda. Portugal, 12, 4Âº A</direccion>
+			<telefono>678903456</telefono>
+			<telefono>923456789</telefono>
+			<curso>1</curso>
+			<nivel>infantil</nivel>
+		</alumno>
+		<alumno expediente="e00001">
+			<nombre>María</nombre>
+			<direccion>Canalejas, 4, 1A</direccion>
+			<telefono>600012345</telefono>
+			<curso>2</curso>
+			<nivel>infantil</nivel>
+		</alumno>
+		<alumno expediente="e67890">
+			<nombre>Javier</nombre>
+			<direccion>Mondego, 8</direccion>
+			<telefono>923985421</telefono>
+			<curso>1</curso>
+			<nivel>primaria</nivel>
+		</alumno>
+	</alumnos>
+
+
+</extraescolares>

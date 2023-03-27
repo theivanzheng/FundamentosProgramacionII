@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT facultad (alumnosConjunto+, conjuntoProfesores+,asignaturasConjunto+)>
+<!ELEMENT alumnosConjunto (alumno+)>
+<!ELEMENT alumno (nombre, apellidos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT conjuntoProfesores (profesor+)>
+<!ELEMENT profesor (nombre,apellidos)>
+<!ELEMENT asignaturasConjunto (asignatura+)>
+<!ELEMENT asignatura (nombreAsignatura, nCreditos,curso,tipo,conjuntoMatriculados+)>
+<!ELEMENT nombreAsignatura (#PCDATA)>
+<!ELEMENT nCreditos (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+
+<!ELEMENT conjuntoMatriculados (alumnoMatriculado+)>
+<!ELEMENT alumnoMatriculado (nota?)>
+<!ELEMENT nota (#PCDATA)>
+
+
+<!ATTLIST alumno idExpediente ID #REQUIRED>
+<!ATTLIST alumnoMatriculado idExpediente IDREF #REQUIRED>
+<!ATTLIST profesor nif ID #REQUIRED>
+<!ATTLIST asignatura idAsignatura ID #REQUIRED>
+<!ATTLIST asignatura profesor IDREFS #REQUIRED>
+

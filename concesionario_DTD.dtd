@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT concesionario (nombreConcesionario, vehiculos,vendedores, compradores,ventas)>
+<!ELEMENT  nombreConcesionario (#PCDATA | cif)*>
+    <!ELEMENT cif (#PCDATA)>
+
+<!ELEMENT  vehiculos (vehiculo*)>
+<!ELEMENT  vehiculo (marca, kms?)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT kms (#PCDATA)>
+
+<!ELEMENT  vendedores (vendedor+)>
+    <!ELEMENT  vendedor (nif, nombre, apellidos, antiguedad)>
+        <!ELEMENT nif (#PCDATA)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT antiguedad (#PCDATA)>
+
+<!ELEMENT  compradores (cliente+)>
+    <!ELEMENT  cliente (nif, nombre, apellidos)>
+
+<!ELEMENT  ventas (venta+)>
+    <!ELEMENT  venta (comprador, fecha, precio)>
+        <!ELEMENT comprador (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+
+
+
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+
+<!ATTLIST vehiculo tipo (familiar|turismo|todoterreno) "turismo" >
+<!ATTLIST vehiculo matricula ID #REQUIRED>
+<!ATTLIST vendedor codigo ID #REQUIRED>
+<!ATTLIST venta matricula IDREF #REQUIRED>
+<!ATTLIST venta codigoVendedor IDREF #REQUIRED>
+
+
+
+

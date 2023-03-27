@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE notas SYSTEM "notas.dtd">
+
+<notas>
+    <nota>
+        <titulo tipoLetra="Times" tamaño="12pt">Lista de la <n>compra</n></titulo>
+        <cuerpo tipoLetra ="Courier">
+            Tomates.
+            Patatas.
+            Yogures.
+        
+            <n>Pañales.</n>
+            Agua.
+        </cuerpo>
+    </nota>
+    <nota>
+        <titulo tipoLetra="Times" tamaño="14pt">Reyes Magos</titulo>
+        <cuerpo tipoLetra ="Calibri" tamaño="11pt">
+            Bolso (<n>Inés</n>).
+            Zapatos (
+                   <n>
+                       <c>Laura</c> 
+                   </n> )
+            <n>FALTA Fernando.</n>
+        </cuerpo>
+    </nota>
+        
+
+
+
+</notas>

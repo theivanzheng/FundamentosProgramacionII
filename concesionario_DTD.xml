@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionario SYSTEM "concesionario_DTD.dtd">
+<concesionario>
+    <nombreConcesionario>Compra-Venta Paris<cif>12345678Q</cif></nombreConcesionario>
+    <vehiculos>
+        <vehiculo tipo = "familiar" matricula="GHS4215">
+            <marca>Audi</marca>
+            <kms>40000</kms>
+        </vehiculo>
+        <vehiculo matricula="GHS3315">
+            <marca>Audi</marca>
+            <kms>45000</kms>
+        </vehiculo>
+        <vehiculo tipo = "turismo" matricula="AHS2323">
+            <marca>BMW</marca>
+        </vehiculo>
+        <vehiculo tipo = "turismo" matricula="GCS1515">
+            <marca>BMW</marca>
+            <kms>20000</kms>
+        </vehiculo>
+        <vehiculo tipo = "todoterreno" matricula="GHS1215">
+            <marca>Volvo</marca>
+        </vehiculo>
+        <vehiculo tipo = "todoterreno" matricula="KHS4225">
+            <marca>Volvo</marca>
+            <kms>140000</kms>
+        </vehiculo>
+        <vehiculo tipo = "familiar" matricula="GAS2215">
+            <marca>Audi</marca>
+            <kms>10000</kms>
+        </vehiculo>
+        <vehiculo tipo = "familiar" matricula="AHS4211">
+            <marca>Audi</marca>
+            <kms>40000</kms>
+        </vehiculo>
+    </vehiculos>
+    <vendedores>
+        <vendedor codigo="v000">
+            <nif>07985214R</nif>
+            <nombre>Manuel</nombre>
+            <apellidos>Martín Martín</apellidos>
+            <antiguedad>1973</antiguedad>
+        </vendedor>
+        <vendedor codigo="v003">
+            <nif>07985444R</nif>
+            <nombre>Antonio</nombre>
+            <apellidos>García Martín</apellidos>
+            <antiguedad>1983</antiguedad>
+        </vendedor>
+        <vendedor codigo="v013">
+            <nif>88985444R</nif>
+            <nombre>Marta</nombre>
+            <apellidos>Gutiérrez Martín</apellidos>
+            <antiguedad>1988</antiguedad>
+        </vendedor>
+        <vendedor codigo="v023">
+            <nif>88985433R</nif>
+            <nombre>Julián</nombre>
+            <apellidos>García Martín</apellidos>
+            <antiguedad>1990</antiguedad>
+        </vendedor>
+        <vendedor codigo="v033">
+            <nif>09985444R</nif>
+            <nombre>Ramón</nombre>
+            <apellidos>Gutiérrez Martín</apellidos>
+            <antiguedad>2000</antiguedad>
+        </vendedor>
+        <vendedor codigo="v123">
+            <nif>88985444R</nif>
+            <nombre>Laura</nombre>
+            <apellidos>Gutiérrez Martín</apellidos>
+            <antiguedad>2001</antiguedad>
+        </vendedor>
+    </vendedores>
+    <compradores>
+        <cliente>
+            <nif>07741424Q</nif>
+            <nombre>Paula</nombre>
+            <apellidos>Fernández Martín</apellidos>
+        </cliente>
+        <cliente>
+            <nif>08841424J</nif>
+            <nombre>Luis</nombre>
+            <apellidos>Fernández Martín</apellidos>
+        </cliente>
+        <cliente>
+            <nif>07745524R</nif>
+            <nombre>Jose</nombre>
+            <apellidos>Fernández Fernández</apellidos>
+        </cliente>
+        <cliente>
+            <nif>07777424M</nif>
+            <nombre>Juani</nombre>
+            <apellidos>Luis Martín</apellidos>
+        </cliente>
+    </compradores>
+    <ventas>
+        <venta matricula="GHS4215" codigoVendedor="v000">
+            <comprador>07777424M</comprador>
+            <fecha>2013-05-05</fecha>
+            <precio>18000</precio>
+        </venta>
+        <venta matricula="GHS3315" codigoVendedor="v000">
+            <comprador>07745524R</comprador>
+            <fecha>2013-05-06</fecha>
+            <precio>20000</precio>
+        </venta>
+        <venta matricula="AHS2323" codigoVendedor="v033">
+            <comprador>08841424J</comprador>
+            <fecha>2013-04-06</fecha>
+            <precio>25000</precio>
+        </venta>
+        <venta matricula="GCS1515" codigoVendedor="v033">
+            <comprador>07741424Q</comprador>
+            <fecha>2013-04-06</fecha>
+            <precio>10000</precio>
+        </venta>
+        <venta matricula="GHS1215" codigoVendedor="v123">
+            <comprador>07741424Q</comprador>
+            <fecha>2013-03-06</fecha>
+            <precio>10000</precio>
+        </venta>
+        <venta matricula="KHS4225" codigoVendedor="v123">
+            <comprador>07741424Q</comprador>
+            <fecha>2013-03-06</fecha>
+            <precio>15000</precio>
+        </venta>
+    </ventas>
+</concesionario>

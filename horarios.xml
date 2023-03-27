@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facultad SYSTEM "horarios.dtd">
+
+
+<facultad>
+    <nombre>Facultad de Informática</nombre>
+    <asignaturas>
+        <asignatura codigoAsignatura="LP" tipo="obligatoria">
+            <nombre>Lenguajes de Programación</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="FPI" tipo="obligatoria">
+            <nombre>Fundamentos de Programación I</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="FPII" tipo="obligatoria">
+            <nombre>Fundamentos de Programación II</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="FF" tipo="obligatoria">
+            <nombre>Fundamentos Físicos</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="SSOO" tipo="obligatoria">
+            <nombre>Sistemas Operativos</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="ENG" tipo="optativa">
+            <nombre>Inglés</nombre>
+            <curso>1</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="JAV" tipo="obligatoria">
+            <nombre>Programación</nombre>
+            <curso>2</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="APPS" tipo="obligatoria">
+            <nombre>Programación de Aplicaciones</nombre>
+            <curso>2</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="SSOOII" tipo="obligatoria">
+            <nombre>Ampliacion de Sistemas Operativos</nombre>
+            <curso>2</curso>
+        </asignatura>
+        <asignatura codigoAsignatura="DAT" tipo="obligatoria">
+            <nombre>Estructura de Datos</nombre>
+            <curso>2</curso>
+        </asignatura>
+    </asignaturas>
+    <horarios>
+        <horario curso="1">
+            <practica dia="lunes" hora="9" grupo="A-Z" asignatura="LP"/>
+            <teorica  dia="lunes" hora="11" asignatura="FPI"/>
+            <practica dia="lunes" hora="13" asignatura="FPI"/>
+            <practica dia="martes" hora="9" grupo="A-H" asignatura="FF"/>
+            <teorica  dia="martes" hora="11" asignatura="SSOO"/>
+            <practica dia="martes" hora="13" asignatura="ENG"/>
+            <practica dia="martes" hora="16" grupo="I-Z" asignatura="FF"/>
+            <teorica  dia="miercoles" hora="9" asignatura="ENG"/>
+            <teorica  dia="miercoles" hora="11" asignatura="FPII"/>
+            <practica dia="miercoles" hora="13" asignatura="FPII"/>
+            <practica dia="jueves" hora="9" grupo="A-Z" asignatura="SSOO"/>
+            <teorica  dia="jueves" hora="11" asignatura="FPII"/>
+            <practica dia="jueves" hora="13" asignatura="ENG"/>
+        </horario>
+        <horario curso="2">
+            <practica dia="lunes" hora="9" grupo="A-Z" asignatura="JAV"/>
+            <teorica  dia="lunes" hora="11" asignatura="APPS"/>
+            <practica dia="lunes" hora="13" asignatura="APPS"/>
+            <practica dia="martes" hora="9" grupo="A-H" asignatura="DAT"/>
+            <teorica  dia="martes" hora="11" asignatura="SSOOII"/>
+            <practica dia="martes" hora="13" asignatura="JAV"/>
+            <teorica  dia="miercoles" hora="9" asignatura="DAT"/>
+            <teorica  dia="miercoles" hora="11" asignatura="APPS"/>
+            <practica dia="miercoles" hora="13" asignatura="DAT"/>
+            <practica dia="jueves" hora="9" grupo="A-Z" asignatura="JAV"/>
+            <teorica  dia="jueves" hora="11" asignatura="JAV"/>
+            <practica dia="jueves" hora="13" asignatura="SSOOII"/>
+        </horario>
+    </horarios>
+</facultad>

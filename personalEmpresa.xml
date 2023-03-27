@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="personalEmpresa.xsd"> 
+
+    <trabajadores>
+        <trabajador codigoTrabajador="AAA111">
+            <nombre>Antonio García</nombre>
+            <antiguedad>5</antiguedad>
+            <departamentoTrabaja>INF</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="AAA222">
+            <nombre>Miguel Ángel García</nombre>
+            <antiguedad>15</antiguedad>
+            <departamentoTrabaja>INF</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="AAA333">
+            <nombre>Daniel García</nombre>
+            <antiguedad>10</antiguedad>
+            <departamentoTrabaja>INF</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="AAA444">
+            <nombre>Alberto García</nombre>
+            <antiguedad>10</antiguedad>
+            <departamentoTrabaja>INF</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="BBB111">
+            <nombre>Inés García</nombre>
+            <antiguedad>7</antiguedad>
+            <departamentoTrabaja>PER</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="BBB222">
+            <nombre>Inma García</nombre>
+            <antiguedad>7</antiguedad>
+            <departamentoTrabaja>PER</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="BBB333">
+            <nombre>Raúl García</nombre>
+            <antiguedad>17</antiguedad>
+            <departamentoTrabaja>PER</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="CCC111">
+            <nombre>Bea García</nombre>
+            <antiguedad>6</antiguedad>
+            <departamentoTrabaja>SIE</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="CCC222">
+            <nombre>Lucas García</nombre>
+            <antiguedad>7</antiguedad>
+            <departamentoTrabaja>SIE</departamentoTrabaja>
+            <departamentoTrabaja>BIB</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="CCC333">
+            <nombre>Raquel García</nombre>
+            <antiguedad>6</antiguedad>
+            <departamentoTrabaja>SIE</departamentoTrabaja>
+        </trabajador>
+        <trabajador codigoTrabajador="DDD111">
+            <nombre>Maribel García</nombre>
+            <antiguedad>26</antiguedad>
+            <departamentoTrabaja>BIB</departamentoTrabaja>
+        </trabajador>
+    </trabajadores>
+    <departamentos>
+        <departamento codigo="INF"> 
+            <nombre>Servicio de Informática</nombre>
+            <lugar>Planta 3</lugar>
+        </departamento>
+        <departamento codigo="SIE"> 
+            <nombre>Servicio de Información al Estudiante</nombre>
+            <lugar>Planta 3</lugar>
+        </departamento>
+        <departamento codigo="PER"> 
+            <nombre>Recursos Humanos</nombre>
+            <lugar>Planta 3</lugar>
+        </departamento>
+        <departamento codigo="BIB"> 
+            <nombre>Biblioteca</nombre>
+            <lugar>Planta -1</lugar>
+        </departamento>
+    </departamentos>
+    <fichajes>
+        <entrada empleado="AAA111">
+            <fecha>2019-05-01</fecha>
+            <hora>08:00:00</hora>
+        </entrada>
+        <entrada empleado="AAA222">
+            <fecha>2019-05-01</fecha>
+            <hora>08:00:00</hora>
+        </entrada>
+        <entrada empleado="AAA333">
+            <fecha>2019-05-01</fecha>
+            <hora>08:01:00</hora>
+        </entrada>
+         <salida empleado="AAA333">
+            <fecha>2019-05-01</fecha>
+            <hora>10:33:00</hora>
+        </salida>
+        <salida empleado="AAA111">
+            <fecha>2019-05-01</fecha>
+            <hora>15:00:00</hora>
+        </salida>
+        <salida empleado="AAA222">
+            <fecha>2019-05-01</fecha>
+            <hora>15:01:00</hora>
+        </salida>
+         <entrada empleado="AAA444">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="AAA444">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="BBB111">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB111">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="BBB222">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB222">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="BBB333">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB333">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="CCC111">
+            <fecha>2019-05-01</fecha>
+            <hora>10:00:00</hora>
+        </entrada>
+         <salida empleado="CCC111">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </salida>
+        <entrada empleado="CCC222">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="CCC222">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="CCC333">
+            <fecha>2019-05-01</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="CCC333">
+            <fecha>2019-05-01</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="DDD111">
+            <fecha>2019-05-01</fecha>
+            <hora>08:00:00</hora>
+        </entrada>
+         <salida empleado="DDD111">
+            <fecha>2019-05-01</fecha>
+            <hora>15:00:00</hora>
+        </salida> 
+        <entrada empleado="AAA111">
+            <fecha>2019-05-02</fecha>
+            <hora>08:00:00</hora>
+        </entrada>
+        <entrada empleado="AAA222">
+            <fecha>2019-05-02</fecha>
+            <hora>08:00:00</hora>
+        </entrada>
+        <entrada empleado="AAA333">
+            <fecha>2019-05-02</fecha>
+            <hora>08:01:00</hora>
+        </entrada>
+        <salida empleado="AAA111">
+            <fecha>2019-05-02</fecha>
+            <hora>15:00:00</hora>
+        </salida>
+        <salida empleado="AAA222">
+            <fecha>2019-05-02</fecha>
+            <hora>15:01:00</hora>
+        </salida>
+        <salida empleado="AAA333">
+            <fecha>2019-05-02</fecha>
+            <hora>15:05:00</hora>
+        </salida>
+         <entrada empleado="AAA444">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="AAA444">
+            <fecha>2019-05-02</fecha>
+            <hora>22:00:00</hora>
+        </salida>    
+        <entrada empleado="BBB111">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB111">
+            <fecha>2019-05-02</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="BBB222">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB222">
+            <fecha>2019-05-02</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="BBB333">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="BBB333">
+            <fecha>2019-05-02</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="CCC111">
+            <fecha>2019-05-02</fecha>
+            <hora>10:00:00</hora>
+        </entrada>
+         <salida empleado="CCC111">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </salida>
+        <entrada empleado="CCC222">
+            <fecha>2019-05-02</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="CCC222">
+            <fecha>2019-05-02</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+        <entrada empleado="CCC333">
+            <fecha>2019-05-03</fecha>
+            <hora>16:00:00</hora>
+        </entrada>
+         <salida empleado="CCC333">
+            <fecha>2019-05-03</fecha>
+            <hora>22:00:00</hora>
+        </salida>
+    </fichajes>
+   
+</empresa>
+

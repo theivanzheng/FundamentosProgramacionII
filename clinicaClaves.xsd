@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element  name="clinica" type="tClinica">
+         <!-- keys globales --> 
+        <xs:key name="medicoKey">
+            <xs:selector xpath="medico"/>
+            <xs:field xpath="@nColegiado"/>
+        </xs:key>
+
+        <xs:key name="pacienteKey">
+            <xs:selector xpath="paciente"/>
+            <xs:field xpath="nss"/>
+        </xs:key>    
+
+        <xs:keyref name="pacienteConsultaKeyRef" refer="pacienteKey">
+            <xs:selector xpath="medico/turno/consulta"/>
+            <xs:field xpath="paciente_consulta"/>
+      
+        </xs:keyref> 
+    
+    </xs:element>
+       
+    <xs:complexType name="tClinica">
+        <xs:sequence>
+        <xs:element name="medico" 
+                    type="tmedico" 
+                    maxOccurs="unbounded"/>
+        <xs:element name="paciente"
+                    type="tpaciente"
+                    minOccurs="0" 
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+        
+    </xs:complexType>  
+    
+    <xs:complexType name="tmedico">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="turno" type="tTurno" maxOccurs="unbounded"/>
+        </xs:sequence>
+          
+        <xs:attribute name="nColegiado" type="tColegiado" use="required"/>    
+        <xs:attribute name="especialidad" type="tEspecialidad" use="required"/>    
+           
+    </xs:complexType>
+    
+    <xs:simpleType name="tColegiado">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tEspecialidad">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="medicina interna"/>
+                <xs:enumeration value="cardiologia"/>
+                <xs:enumeration value="odontologia"/>
+                <xs:enumeration value="traumatologia"/>
+        </xs:restriction>
+    </xs:simpleType>  
+      
+    <xs:complexType name="tTurno">
+        <xs:sequence>
+            <xs:element name="fecha" type="xs:date"/>
+            <xs:element name="hora_ini" type="xs:time"/>
+            <xs:element name="hora_fin" type="xs:time"/>
+            <xs:element name="enfermero" type="xs:string"/>
+            <xs:element name="consulta" type="tConsulta" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tConsulta">
+        <xs:sequence>
+            <xs:element name="hora_cons" type="xs:string"/>
+            <xs:element name="paciente_consulta" type="xs:string"/>
+            <xs:element name="receta" type="treceta" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="importe" type="xs:decimal" minOccurs="0"/>       <!-- Por defecto maxOccurs=1-->
+        </xs:sequence>
+        
+        <xs:attribute name="motivo" type="xs:string"/>    
+    </xs:complexType>
+    <xs:complexType name="treceta">
+        <xs:sequence>
+            <xs:element name="medicamento" type="xs:string"/>
+            <xs:element name="posologia" type="xs:string"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+        
+         
+    <xs:complexType name="tpaciente">
+        <xs:sequence>
+            <xs:element name="nss" type="xs:integer"/>
+            <xs:element name="nombre" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    
+
+
+</xs:schema>

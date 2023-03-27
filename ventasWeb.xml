@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<informacionWeb xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="ventasWeb.xsd">
+    <productos>
+        <producto codigo="WOM11">
+            <descripcion>
+                Blusa de mujer coleccion PV 
+            </descripcion>
+            <color>azul</color>
+            <almacen>
+                <stock talla="XS" unidades="50"/>  
+                <stock talla="S"  unidades="100"/>
+                <stock talla="L"  unidades="20"/>
+            </almacen>
+        </producto>
+        
+        <producto codigo="WOM12">
+            <descripcion>
+                Pantalon mujer coleccion PV 
+                <importante>talla pequeño</importante>
+            </descripcion>
+            <color>azul</color>
+            <almacen>
+                <stock talla="XS" unidades="20"/>
+                <stock talla="S"  unidades="50"/>
+                <stock talla="L"  unidades="50"/>
+                <stock talla="XL" unidades="25"/>
+            </almacen>
+        </producto>
+        
+        <producto codigo="WOM13">
+            <descripcion>
+                vestido de mujer coleccion PV 
+            </descripcion>
+            <color>estampado flores rosas y verdes</color>
+            <almacen>
+                <stock talla="XS" unidades="50"/>
+                
+                <stock talla="S"  unidades="10"/>
+                <stock talla="L"  unidades="5"/>
+            </almacen>
+        </producto>
+        <producto codigo="MAN13">
+            <descripcion>
+                camisa hombre coleccion PV 
+            </descripcion>
+            <color>blanca cuadros</color>
+            <almacen>
+                <stock talla="S"  unidades="10"/>
+                <stock talla="L"  unidades="5"/>
+            </almacen>
+        </producto>
+        <producto codigo="MAN11">
+            <descripcion>
+                pantalon hombre coleccion PV <importante> contiene elastano</importante> 
+            </descripcion>
+            <color>jeans</color>
+            <almacen>
+            </almacen>
+        </producto>     
+    </productos>
+    <clientes>
+        <cliente login="antonio" password="asdcfre4" premium="si">
+            <nombre>Antonio Martín</nombre>
+            <direccion>C/Compañía 5</direccion>
+        </cliente>
+        
+        <cliente login="jGarcia" password="a34rtfrgt">
+            <nombre>Juan García</nombre>
+            <direccion>C/Compañía 5</direccion>
+        </cliente>
+        <cliente login="mariaRodriguez" password="asdcfre4" premium="si">
+            <nombre>María Rodríguez</nombre>
+            <direccion>C/Compañía 5</direccion>
+        </cliente>
+        <cliente login="Espera" password="asdcfre4">
+            <nombre>Esperanza</nombre>
+            <direccion>C/Compañía 5</direccion>
+        </cliente>
+    </clientes>
+    <compras>
+        <compra producto="WOM11" cliente="Espera" unidades="2" talla="XS"/>
+        <compra producto="WOM11" cliente="Espera" unidades="2" talla="S"/>
+        <compra producto="WOM11" cliente="mariaRodriguez" talla="XS"/>
+        <compra producto="MAN13" cliente="jGarcia" unidades="1" talla="L"/>
+
+    </compras>
+</informacionWeb>

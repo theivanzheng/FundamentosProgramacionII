@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT reservas (reserva*, usuario+, hotel+)>
+<!ELEMENT reserva (fecha_ini, fecha_fin,huespedes)>
+    <!ELEMENT fecha_ini (#PCDATA)>
+    <!ELEMENT fecha_fin (#PCDATA)>
+    <!ELEMENT huespedes (adultos,niños?)>
+        <!ELEMENT adultos EMPTY>
+        <!ELEMENT niños EMPTY>
+
+    <!ELEMENT usuario (nombre,pago+)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT pago (tarjeta* | paypal*)+>  
+            <!ELEMENT tarjeta (#PCDATA)>
+            <!ELEMENT paypal EMPTY>
+
+
+    <!ELEMENT hotel (ciudad, direccion)>
+        <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>
+
+<!ATTLIST reserva user IDREF #REQUIRED>
+<!ATTLIST reserva hotel IDREF #REQUIRED>
+
+<!ATTLIST usuario login ID #REQUIRED>
+
+<!ATTLIST adultos numero CDATA #REQUIRED>
+<!ATTLIST niños numero CDATA "0"> 
+
+<!ATTLIST tarjeta mes (1|2|3|4|5|6|7|8|9|10|11|12) #REQUIRED>
+<!ATTLIST tarjeta anho CDATA #REQUIRED>
+<!ATTLIST paypal usuario CDATA #REQUIRED>
+<!ATTLIST paypal password CDATA #REQUIRED>
+
+<!ATTLIST hotel codigo ID #REQUIRED>
+<!ATTLIST hotel estrellas (1|2|3|4|5) "3">

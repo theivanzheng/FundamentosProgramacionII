@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT supermercado (producto+,caja+,cajero+,empleados)>
+<!ELEMENT producto (descripcion)>
+<!ELEMENT descripcion (#PCDATA|importante?)*>
+<!ELEMENT importante (#PCDATA)>
+
+<!ELEMENT caja (compra*)>
+<!ELEMENT compra (item+)>
+<!ELEMENT item EMPTY >
+
+<!ELEMENT cajero (abierta, cerrada)*>
+<!ELEMENT abierta (#PCDATA)>
+<!ELEMENT cerrada (#PCDATA)>
+
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, puesto)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT puesto (#PCDATA)>
+
+<!ATTLIST producto codigo ID #REQUIRED>
+
+<!ATTLIST caja codigo ID #REQUIRED>
+<!ATTLIST item codigoProducto IDREF #REQUIRED>
+<!ATTLIST item unidades CDATA "1">
+
+<!ATTLIST cajero codigoCajero IDREF #REQUIRED>
+<!ATTLIST cajero codigoCaja IDREF #REQUIRED>
+
+<!ATTLIST empleado codigo ID #REQUIRED>
+
+
+
+
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+

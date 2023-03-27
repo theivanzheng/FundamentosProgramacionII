@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+<!DOCTYPE quiz SYSTEM "bancoPreguntasMoodle.dtd">
+
+-->
+<quiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="bancoPreguntasMoodle.xsd">
+
+<!--
+<quiz>
+ -->
+    <questions>
+        <question codigo="q1Automata" type="truefalse">
+           <questiontext format="html">
+             <text>Todo autómata finito <b>no determinista</b> puede convertirse en una autómata finito determinista equivalente</text>
+           </questiontext>
+           <answer codigo="a1">
+                <text>verdadero</text>
+            </answer>
+            <answer codigo="a2">
+                <text>
+                    <b>falso </b>
+                </text>
+            </answer>
+        </question>
+        <question codigo="q2Automata" type="truefalse">
+           <questiontext format="html">
+               <text>Un autómata finito determinista <b>no</b> puede reconocer la <b>palabra vacía</b></text>
+           </questiontext>
+           <answer codigo="a1">
+                <text>verdadero</text>
+            </answer>
+            <answer codigo="a2">
+                <text>falso</text>
+            </answer>
+        </question> 
+        <question codigo="q3Automata" type="truefalse">
+           <questiontext format="html">
+               <text>Un autómata finito determinista solo puede tener un estado final</text>
+           </questiontext>
+           <answer codigo="a1" >
+                <text>verdadero</text>
+            </answer>
+            <answer codigo="a2">
+                <text>falso</text>
+            </answer>
+        </question>
+        <question codigo="q4Automata" type="multiple">
+           <questiontext format="html">
+               <text>Señala cual de las siguientes es una afirmación verdadera</text>
+           </questiontext>
+           <answer codigo="a1" >
+                <text>Los AFD sirven para realizar el análisis sintáctico</text>
+            </answer>
+            <answer codigo="a2">
+                <text>Los AFND solo reconocen lenguajes que contengan la palabra vacía</text>
+            </answer>
+            <answer codigo="a3">
+                <text>Los AFD y los AFND son equivalentes</text>
+            </answer>
+        </question> 
+        <question codigo="q5Automata" type="multiple">
+           <questiontext format="html">
+               <text>Señala cual de las siguientes es una afirmación falsa</text>
+           </questiontext>
+           <answer codigo="a1" >
+                <text>Los AFD sirven para realizar el análisis léxico</text>
+            </answer>
+            <answer codigo="a2">
+                <text>Los AFND solo reconocen lenguajes regulares</text>
+            </answer>
+            <answer codigo="a3">
+                <text>los AFND tienen más potencia que los AFD</text>
+            </answer>
+        </question> 
+    </questions>
+    <solutions>
+        <solution question="q1Automata" valueAnswerCorrect="a1"/>
+        <solution question="q2Automata" valueAnswerCorrect="a2"/>
+        <solution question="q3Automata" valueAnswerCorrect="a2"/>
+        <solution question="q4Automata" valueAnswerCorrect="a3"/>
+        <solution question="q5Automata" valueAnswerCorrect="a3"/> 
+    </solutions>
+    <exams>
+        <exam codigoConvocatoria="Ord20" tipo="A" aleatorio="true">
+            <pregunta codigoPregunta="q1Automata" baremacion="20"/>
+            <pregunta codigoPregunta="q3Automata" baremacion="40"/>
+            <pregunta codigoPregunta="q5Automata" baremacion="40"/>
+        </exam>
+        <exam codigoConvocatoria="Ord20" tipo="B" aleatorio="true">
+            <pregunta codigoPregunta="q2Automata" baremacion="20"/>
+            <pregunta codigoPregunta="q4Automata" baremacion="40"/>
+            <pregunta codigoPregunta="q5Automata" baremacion="40"/>
+        </exam>
+        <exam codigoConvocatoria="Ord20" tipo="C" aleatorio="true">
+            <pregunta codigoPregunta="q1Automata" baremacion="20"/>
+            <pregunta codigoPregunta="q4Automata" baremacion="40"/>
+            <pregunta codigoPregunta="q3Automata" baremacion="20"/>   
+        </exam>
+    </exams>
+    
+</quiz>
