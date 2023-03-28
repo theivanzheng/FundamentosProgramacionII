@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="reservas" type="tReservas">
+        <!--Mis claves globales-->
+        <xs:key name="loginKey">
+            <xs:selector xpath="./usuario"/>
+            <xs:field    xpath="@login"/>
+        </xs:key>
+        <xs:key name="codigoHotelKey">
+            <xs:selector xpath="./hotel"/>
+            <xs:field    xpath="@codigo"/>
+        </xs:key>
+        <xs:key name="reservaKey">
+            <xs:selector xpath=".//reserva"/>
+            <xs:field    xpath="codigo"/>
+        </xs:key>
+        <xs:keyref name="codigoReservaHotel" refer="codigoHotelKey">
+            <xs:selector xpath="reserva"/>
+            <xs:field xpath="@hotel"/>
+        </xs:keyref>
+        <xs:keyref name="codigoUsuarioReserva" refer="loginKey">
+            <xs:selector xpath="reserva"/>
+            <xs:field xpath="@user"/>
+        </xs:keyref>        
+    </xs:element>
+    
+    <!--La rama estructural de todo mi documento-->
+    <xs:complexType name="tReservas">
+        <xs:sequence>
+            <xs:element name="reserva" type="tReserva" minOccurs="0" maxOccurs="unbounded"/> 
+            <xs:element name="usuario" type="tUsuario" minOccurs="1" maxOccurs="unbounded"/> 
+            <xs:element name="hotel" type="tHotel"     minOccurs="1" maxOccurs="unbounded"/> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <!--Mis elementos dentro de la rama-->
+    <xs:complexType name="tReserva">
+        <xs:sequence>
+            <xs:element  name="codigo"       type="xs:string"/>
+            <xs:element  name="fecha_ini"    type="xs:date"/>
+            <xs:element  name="fecha_fin"    type="xs:date"/>
+            <xs:element  name="huespedes"    type="tHuespedes"/>
+        </xs:sequence>
+        <xs:attribute name="user"        type="xs:string"   use="required"/>
+        <xs:attribute name="hotel"       type="xs:string"   use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tHuespedes">
+        <xs:sequence>
+            <xs:element name="adultos"      type="tAdultos"/>
+            <xs:element name="niños"        type="tNiños" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tAdultos">
+         <xs:attribute name="numero" type="xs:integer" use="required"/>
+    </xs:complexType>  
+    
+    <xs:complexType name="tNiños">
+         <xs:attribute name="numero" type="xs:integer" default="0"/>
+    </xs:complexType>    
+    
+    <xs:complexType name="tUsuario">
+        <xs:sequence>
+            <xs:element  name="nombre"    type="xs:string"/>
+            <xs:element  name="pago"      type="tPago">
+                <xs:key name="unicaTarjetUserKey">
+                    <xs:selector xpath="./tarjeta"/>
+                    <xs:field xpath="."/>
+                </xs:key>
+                <xs:key name="unicoPaypalKey">
+                    <xs:selector xpath="./paypal"/>
+                    <xs:field xpath="@usuario"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="login" type="tLogin"  use="required"/>    
+    </xs:complexType>  
+    
+    <xs:simpleType name="tLogin">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{3}[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="tPago">
+        <xs:choice maxOccurs="unbounded" minOccurs="1">
+            <xs:element name="tarjeta"  type="tTarjeta"/>
+            <xs:element name="paypal"   type="tPaypal">
+                 
+            </xs:element>    
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="tTarjeta">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="mes"    type="tMes"     use="required"/>
+                <xs:attribute name="anho"    type="tAnho"   use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="tMes">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tAnho">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tPaypal">
+        <xs:attribute name="usuario" type="xs:string"    use="required"/> 
+        <xs:attribute name="password" type="xs:string"   use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tHotel">    
+        <xs:sequence>
+            <xs:element name="ciudad" type="xs:string"/>
+            <xs:element name="direccion" type="xs:string"/>
+            <xs:element name="localizacion" type="tLocalizacion"/>
+        </xs:sequence>    
+     
+      <xs:attribute name="codigo"       type="tCodigo"     use="required"/>
+      <xs:attribute name="estrellas"    type="tEstrellas"  default="3"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tLocalizacion">
+        <xs:sequence>
+             <xs:element name="latitud" type="xs:decimal"/>
+            <xs:element name="longitud" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tEstrellas">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[1-5]"/>
+        </xs:restriction>
+    </xs:simpleType>    
+        
+        
+        
+    </xs:schema>

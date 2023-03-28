@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<reservas  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="reservasSchema.xsd">
+    <reserva user="ebg1988" hotel="SA123">
+        <codigo>MARebg1</codigo>
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>   
+    
+    <reserva user="rbg1988" hotel="SA123">
+        <codigo>FEBebg1</codigo>
+        <fecha_ini>2017-02-05</fecha_ini>
+        <fecha_fin>2017-02-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>
+    <reserva user="rbg1988" hotel="ZA123">
+        <codigo>MARrbg2</codigo>
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="1"/>
+            <niños/>
+        </huespedes>
+    </reserva>
+    <reserva user="mgs1988" hotel="LE123">
+        <codigo>MARmgs3</codigo>
+        <fecha_ini>2017-03-05</fecha_ini>
+        <fecha_fin>2017-03-10</fecha_fin>
+        <huespedes>
+            <adultos numero="2"/>
+            <niños numero="2"/>
+        </huespedes>
+    </reserva>
+    
+    <usuario login="rbg1988">
+        <nombre>Eugenio Barrios</nombre>
+        <pago>
+            <tarjeta mes="12" anho="2019">2144467890</tarjeta> 
+            <tarjeta mes="12" anho="2018">2134467890</tarjeta>
+            <paypal usuario="ebg19" password="ebg1988_A"/>
+            <paypal usuario="abc19" password="ebg1988_A"/>
+        </pago>
+    </usuario>
+
+    <usuario login="ebg1988">
+        <nombre>Ricardo Barrio</nombre>
+        <pago>
+            <tarjeta mes="12" anho="2019">2134467890</tarjeta> 
+            <paypal usuario="mgs678" password="uno-1988_B"/>         
+        </pago>
+    </usuario>
+    <usuario login="mgs1988">
+        <nombre>Maria Garcia</nombre>
+        <pago>
+            <paypal usuario="mgs678" password="uno-1988_B"/>   
+            <tarjeta mes="12" anho="2019">2144467890</tarjeta>  
+                          
+        </pago>
+    </usuario>
+    
+    <hotel codigo="SA123" estrellas="5">
+        <ciudad>Salamanca</ciudad>
+        <direccion>Plaza Mayor 25 </direccion>
+        <localizacion>
+            <latitud>40.96</latitud>
+            <longitud>-5.66</longitud>
+        </localizacion>
+    </hotel>
+    <hotel codigo="ZA123" estrellas="5">
+        <ciudad>Zamora</ciudad>
+        <direccion>Plaza Mayor 25</direccion>
+        <localizacion>
+            <latitud>41.50</latitud>
+            <longitud>-5.74</longitud>
+        </localizacion>
+    </hotel>
+    <hotel codigo="LE123" estrellas="3">
+        <ciudad>Leon</ciudad>
+        <direccion>Plaza Mayor 25</direccion>
+        <localizacion>
+            <latitud>42.59</latitud>
+            <longitud>-5.56</longitud>
+        </localizacion>
+    </hotel>
+    
+
+    
+</reservas>
+
