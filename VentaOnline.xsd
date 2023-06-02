@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="web" type="tWeb">
+        <xs:key name="mailKey">
+            <xs:selector xpath="usuarios/user"/>
+            <xs:field xpath="mail"/>
+        </xs:key>
+        <xs:key name="productoKey">
+            <xs:selector xpath="productos/producto"/>
+            <xs:field xpath="codigo"/>
+        </xs:key>
+        <xs:key name="compraKey">
+            <xs:selector xpath="web/compras/compra"/>
+            <xs:field xpath="codigoCompra"/>
+        </xs:key>    
+            
+        <xs:keyref name="codProductoKey" refer="productoKey">
+            <xs:selector xpath="web/compras/compra"/>
+            <xs:field xpath="@codProducto"/>
+        </xs:keyref>
+        
+        <xs:keyref name="mailClienteCompra" refer="mailKey">
+            <xs:selector xpath="compras/compra"/>
+            <xs:field xpath="@usuario"/>
+        </xs:keyref>                                                
+    </xs:element>
+    
+    <xs:complexType name="tWeb">
+        <xs:sequence>
+            <xs:element name="usuarios" type="tUsuarios">
+            </xs:element>
+            <xs:element name="productos" type="tProductos"/>
+            <xs:element name="compras" type="tCompras"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!--    Usuarios    -->
+    <xs:complexType name="tUsuarios">
+        <xs:sequence>
+            <xs:element name="user" type="tUser" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tUser">
+        <xs:sequence>
+            <xs:element name="mail" type="xs:string" />
+            <xs:element name="password" type="tPassword" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="formasPago" type="tFormasPago" minOccurs="0">
+                <xs:unique name="unicaTarjeta">
+                   <xs:selector xpath="tarjeta"/>
+                   <xs:field xpath="."/>
+               </xs:unique>
+            <xs:unique name="unicoTarjetaNombre">
+                <xs:selector xpath="./tarjeta"/>
+                <xs:field xpath="@nombre"/>
+            </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tPassword">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tFormasPago">
+        <xs:sequence>
+            <xs:element name="tarjeta" type="tTarjeta" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string"/>
+
+    </xs:complexType>
+
+    <xs:complexType name="tTarjeta">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="nombre" type="xs:string"/>
+            </xs:extension>
+            
+        </xs:simpleContent>
+    </xs:complexType>
+        
+    <!--    tProductos    -->
+    <xs:complexType name="tProductos">
+        <xs:sequence>
+            <xs:element name="producto" type="tProducto" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>    
+    
+    <xs:complexType name="tProducto">
+        <xs:sequence>
+            <xs:element name="codigo" type="tCodigo"/>
+            <xs:element name="localizacion" type="tLocaclizacion"/>
+            <xs:element name="precio" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType> 
+    
+    <xs:simpleType name="tCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="P[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>    
+    
+    <xs:complexType name="tLocaclizacion">
+        <xs:sequence>
+            <xs:element name="pasillo" type="tPasillo"/>
+            <xs:element name="estanteria" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tPasillo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tEstanteria">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:complexType name="tCompras">
+        <xs:sequence>
+            <xs:element  name="compra" maxOccurs="unbounded">
+               
+                <xs:complexType>
+                    <xs:all>
+                         <xs:element name="unidades"     type="xs:integer"/>
+                        <xs:element name="codigoCompra" minOccurs="0">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[0-9]{4}-[0-9]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                           
+                        </xs:element>
+                        <xs:element name="fecha" minOccurs="0">
+                             <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:all>
+                    
+                    <xs:attribute name="codProducto" type="tCodigo" use="required"/>
+                    <xs:attribute name="usuario"    type="xs:string" use="required"/>
+                    
+                    
+                </xs:complexType>
+               
+            </xs:element>
+        </xs:sequence>
+
+
+    </xs:complexType>
+</xs:schema>

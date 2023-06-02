@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<ropa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ropa.xsd">
+  <producto>
+    <nombre>Camiseta básica</nombre>
+    <descripcion>Una camiseta de algodón de manga corta</descripcion>
+    <precio>19.99</precio>
+    <color>blanco</color>
+    <talla>s</talla>
+  </producto>
+  
+  <producto>
+    <nombre>Pantalón vaquero</nombre>
+    <descripcion>Un pantalón vaquero ajustado</descripcion>
+    <precio>39.99</precio>
+    <color>negro</color>
+    <talla>m</talla>
+  </producto>
+  
+  <producto>
+    <nombre>Vestido floral</nombre>
+    <descripcion>Un elegante vestido de flores</descripcion>
+    <precio>79.99</precio>
+    <color>coral</color>
+    <talla>l</talla>
+  </producto>
+  
+  <producto>
+    <nombre>Vestido Arrugado</nombre>
+    <descripcion>Un elegante vestido arrugado</descripcion>
+    <precio>79.99</precio>
+    <color>azul</color>
+    <talla>xl</talla>
+  </producto>
+  
+  <!-- Puedes agregar más productos según tus necesidades -->
+</ropa>

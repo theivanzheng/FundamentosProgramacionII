@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ropa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="producto" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="descripcion" type="xs:string"/>
+              <xs:element name="precio" type="xs:decimal"/>
+              <xs:element name="color">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="blanco"/>
+                    <xs:enumeration value="negro"/>
+                    <xs:enumeration value="verde"/>
+                    <xs:enumeration value="coral"/>
+                    <xs:enumeration value="azul"/>
+                    <!-- Agrega más colores según sea necesario -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="talla">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="s"/>
+                    <xs:enumeration value="m"/>
+                    <xs:enumeration value="l"/>
+                    <xs:enumeration value="xl"/>
+                    <!-- Agrega más tallas según sea necesario -->
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

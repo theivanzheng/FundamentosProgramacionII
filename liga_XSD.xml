@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+   
+
+<liga xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="liga.xsd">
+    <equipo nombre="Real Madrid">
+        <entrenador>Zinedine Zidane</entrenador>
+        <nombreEstadio>Santiago Bernabeu</nombreEstadio>
+        <jugadores>
+            <jugador dorsal="42">
+                <nombre>Alex</nombre>
+            </jugador>
+            <jugador dorsal="1">
+                <nombre>Keylor Navas</nombre>
+            </jugador>
+            <jugador dorsal="13">
+                <nombre>Kiko Casilla</nombre>
+            </jugador>
+            <jugador dorsal="31">
+                <nombre>Rubén Yáñez</nombre>
+            </jugador>
+            <jugador dorsal="17">
+                <nombre>Arbeloa</nombre>
+            </jugador>
+            <jugador dorsal="15">
+                <nombre>Carvajal</nombre>
+            </jugador>
+            <jugador dorsal="23">
+                <nombre>Danilo</nombre>
+            </jugador>
+            <jugador dorsal="32">
+                <nombre>Lienhart</nombre>
+            </jugador>
+            <jugador dorsal="12">
+                <nombre>Marcelo</nombre>
+            </jugador>
+            <jugador dorsal="6">
+                <nombre>Nacho</nombre>
+            </jugador>
+            <jugador dorsal="3">
+                <nombre>Pepe</nombre>
+            </jugador>
+            <jugador dorsal="4">
+                <nombre>Sergio Ramos</nombre>
+            </jugador>
+            <jugador dorsal="34">
+                <nombre>Tejero</nombre>
+            </jugador>
+            <jugador dorsal="2">
+                <nombre>Varane</nombre>
+            </jugador>
+            <jugador dorsal="14">
+                <nombre>Casemiro</nombre>
+            </jugador>
+            <jugador dorsal="22">
+                <nombre>Isco</nombre>
+            </jugador>
+            <jugador dorsal="10">
+                <nombre>James Rodríguez</nombre>
+            </jugador>
+            <jugador dorsal="16">
+                <nombre>Kovacic</nombre>
+            </jugador>
+            <jugador dorsal="8">
+                <nombre>Kroos</nombre>
+            </jugador>
+            <jugador dorsal="33">
+                <nombre>Lazo</nombre>
+            </jugador>
+            <jugador dorsal="18">
+                <nombre>Lucas Vázquez</nombre>
+            </jugador>
+            <jugador dorsal="28">
+                <nombre>Marcos Llorente</nombre>
+            </jugador>
+            <jugador dorsal="19">
+                <nombre>Modric</nombre>
+            </jugador>
+            <jugador dorsal="27">
+                <nombre>Odegaard</nombre>
+            </jugador>
+            <jugador dorsal="11">
+                <nombre>Bale</nombre>
+            </jugador>
+            <jugador dorsal="9">
+                <nombre>Benzema</nombre>
+            </jugador>
+            <jugador dorsal="29">
+                <nombre>Borja Mayoral</nombre>
+            </jugador>
+            <jugador dorsal="7">
+                <nombre>Cristiano Ronaldo</nombre>
+            </jugador>
+            <jugador dorsal="20">
+                <nombre>Jesé</nombre>
+            </jugador>
+        </jugadores>
+        <equipoTecnico>
+            <medico>
+                <numeroColegiado>12345</numeroColegiado>
+                <nombre>Alfonso del Corral Salas<especialidad>Cardiología</especialidad></nombre>  
+            </medico>
+            <preparadorFisico>Julián Marias</preparadorFisico>
+            <preparadorFisico>Antonio Martín</preparadorFisico>
+            <utillero>Lucas Montes</utillero>
+        </equipoTecnico>
+    </equipo>
+    <equipo nombre="Barcelona">
+        <entrenador>Luis Enrique Martínez García</entrenador>
+        <nombreEstadio>Camp Nou</nombreEstadio>
+        <jugadores>
+            <jugador dorsal="1">
+                <nombre>Keylor Navas</nombre>
+            </jugador>
+            <jugador dorsal="13">
+                <nombre>Kiko Casilla</nombre>
+            </jugador>
+            <jugador dorsal="31">
+                <nombre>Rubén Yáñez</nombre>
+            </jugador>
+            <jugador dorsal="17">
+                <nombre>Arbeloa</nombre>
+            </jugador>
+            <jugador dorsal="15">
+                <nombre>Carvajal</nombre>
+            </jugador>
+            <jugador dorsal="23">
+                <nombre>Danilo</nombre>
+            </jugador>
+            <jugador dorsal="32">
+                <nombre>Lienhart</nombre>
+            </jugador>
+            <jugador dorsal="12">
+                <nombre>Marcelo</nombre>
+            </jugador>
+            <jugador dorsal="6">
+                <nombre>Nacho</nombre>
+            </jugador>
+            <jugador dorsal="3">
+                <nombre>Pepe</nombre>
+            </jugador>
+            <jugador dorsal="4">
+                <nombre>Sergio Ramos</nombre>
+            </jugador>
+            <jugador dorsal="34">
+                <nombre>Tejero</nombre>
+            </jugador>
+            <jugador dorsal="2">
+                <nombre>Varane</nombre>
+            </jugador>
+            <jugador dorsal="14">
+                <nombre>Casemiro</nombre>
+            </jugador>
+            <jugador dorsal="22">
+                <nombre>Isco</nombre>
+            </jugador>
+            <jugador dorsal="10">
+                <nombre>James Rodríguez</nombre>
+            </jugador>
+            <jugador dorsal="16">
+                <nombre>Kovacic</nombre>
+            </jugador>
+            <jugador dorsal="8">
+                <nombre>Kroos</nombre>
+            </jugador>
+            <jugador dorsal="33">
+                <nombre>Lazo</nombre>
+            </jugador>
+            <jugador dorsal="18">
+                <nombre>Lucas Vázquez</nombre>
+            </jugador>
+            <jugador dorsal="28">
+                <nombre>Marcos Llorente</nombre>
+            </jugador>
+            <jugador dorsal="19">
+                <nombre>Modric</nombre>
+            </jugador>
+            <jugador dorsal="27">
+                <nombre>Odegaard</nombre>
+            </jugador>
+            <jugador dorsal="11">
+                <nombre>Bale</nombre>
+            </jugador>
+            <jugador dorsal="9">
+                <nombre>Benzema</nombre>
+            </jugador>
+            <jugador dorsal="29">
+                <nombre>Borja Mayoral</nombre>
+            </jugador>
+            <jugador dorsal="7">
+                <nombre>Cristiano Ronaldo</nombre>
+            </jugador>
+            <jugador dorsal="20">
+                <nombre>Jesé</nombre>
+            </jugador>
+        </jugadores>
+        <equipoTecnico>
+            <medico>
+                <numeroColegiado>12347</numeroColegiado>
+                <nombre>Manuel Salas Salas</nombre>  
+            </medico>
+            <medico>
+                <numeroColegiado>12349</numeroColegiado>
+                <nombre>Alfonso García del Arco</nombre>  
+            </medico>
+            <utillero>Julián Montes</utillero>
+            <fisio>Fernando Marias</fisio>
+            <preparadorFisico>Antonio Sánchez</preparadorFisico>
+        </equipoTecnico>
+    </equipo>
+    
+    <equipo nombre="Atletico de Madrid">
+        <entrenador>Diego Pablo Simeone</entrenador>
+        <nombreEstadio>Metropolitano</nombreEstadio>
+        <jugadores>
+            
+            <jugador dorsal="13">
+                <nombre>Kiko Casilla</nombre>
+            </jugador>
+            <jugador dorsal="31">
+                <nombre>Rubén Yáñez</nombre>
+            </jugador>
+            <jugador dorsal="17">
+                <nombre>Arbeloa</nombre>
+            </jugador>
+            <jugador dorsal="15">
+                <nombre>Carvajal</nombre>
+            </jugador>
+            <jugador dorsal="23">
+                <nombre>Danilo</nombre>
+            </jugador>
+            <jugador dorsal="32">
+                <nombre>Lienhart</nombre>
+            </jugador>
+            <jugador dorsal="12">
+                <nombre>Marcelo</nombre>
+            </jugador>
+            <jugador dorsal="6">
+                <nombre>Nacho</nombre>
+            </jugador>
+            <jugador dorsal="3">
+                <nombre>Pepe</nombre>
+            </jugador>
+            <jugador dorsal="4">
+                <nombre>Sergio Ramos</nombre>
+            </jugador>
+            <jugador dorsal="34">
+                <nombre>Tejero</nombre>
+            </jugador>
+            <jugador dorsal="2">
+                <nombre>Varane</nombre>
+            </jugador>
+            <jugador dorsal="14">
+                <nombre>Casemiro</nombre>
+            </jugador>
+            <jugador dorsal="22">
+                <nombre>Isco</nombre>
+            </jugador>
+            <jugador dorsal="10">
+                <nombre>James Rodríguez</nombre>
+            </jugador>
+            <jugador dorsal="16">
+                <nombre>Kovacic</nombre>
+            </jugador>
+            <jugador dorsal="8">
+                <nombre>Kroos</nombre>
+            </jugador>
+            <jugador dorsal="33">
+                <nombre>Lazo</nombre>
+            </jugador>
+            <jugador dorsal="18">
+                <nombre>Lucas Vázquez</nombre>
+            </jugador>
+            <jugador dorsal="28">
+                <nombre>Marcos Llorente</nombre>
+            </jugador>
+            <jugador dorsal="19">
+                <nombre>Modric</nombre>
+            </jugador>
+            <jugador dorsal="27">
+                <nombre>Odegaard</nombre>
+            </jugador>
+            <jugador dorsal="11">
+                <nombre>Bale</nombre>
+            </jugador>
+            <jugador dorsal="9">
+                <nombre>Benzema</nombre>
+            </jugador>
+            <jugador dorsal="29">
+                <nombre>Borja Mayoral</nombre>
+            </jugador>
+            <jugador dorsal="7">
+                <nombre>Cristiano Ronaldo</nombre>
+            </jugador>
+            <jugador dorsal="20">
+                <nombre>Jesé</nombre>
+            </jugador>
+        </jugadores>
+        <equipoTecnico>
+            <medico>
+                <numeroColegiado>92347</numeroColegiado>
+                <nombre>Adrián del Bosque Benito
+                    <especialidad>Medicina Deportiva</especialidad>
+                </nombre>  
+            </medico>
+            <utillero>Andrés del Reino</utillero>
+            <fisio>Fernando Gutiérrez</fisio>
+            <preparadorFisico>Pedro del Rio</preparadorFisico>
+        </equipoTecnico>
+    </equipo>
+      
+    <estadios>
+        <estadio>
+            <nombre>Santiago Bernabeu</nombre>
+            <capacidad>85454</capacidad>
+        </estadio>
+        <estadio>
+            <nombre>Camp Nou</nombre>
+            <capacidad>99787</capacidad>
+        </estadio> 
+        <estadio>
+            <nombre>Metropolitano</nombre>
+            <capacidad>54851</capacidad>
+        </estadio>  
+    </estadios>
+    
+</liga>
+

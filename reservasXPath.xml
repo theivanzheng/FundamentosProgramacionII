@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<reservas  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:noNamespaceSchemaLocation="reservasSchema.xsd">
+<reservas>
     <reserva user="ebg1988" hotel="SA123">
         <codigo>MARebg1</codigo>
         <fecha_ini>2017-03-05</fecha_ini>
@@ -49,7 +48,7 @@
             <tarjeta mes="12" anho="2018">2134567890</tarjeta>
             <tarjeta mes="1" anho="2020">2134567330</tarjeta>
             <paypal usuario="ebg19" password="ebg1988_A"/>
-            <paypal usuario="ebg19" password="ebg1988_A"/>
+            <paypal usuario="abc19" password="ebg1988_A"/>
         </pago>
     </usuario>
     
@@ -58,7 +57,6 @@
         <nombre>Ricardo Barrio</nombre>
         <pago>
             <tarjeta mes="12" anho="2019">2144467890</tarjeta> 
-            
             <paypal usuario="mgs678" password="uno-1988_B"/>         
         </pago>
     </usuario>
@@ -79,9 +77,9 @@
             <longitud>-5.66</longitud>
         </localizacion>
     </hotel>
-    <hotel codigo="ZA123" estrellas="5">
+    <hotel codigo="ZA123" estrellas="4">
         <ciudad>Zamora</ciudad>
-        <direccion>Plaza Mayor 25</direccion>
+        <direccion>Gran Via 25</direccion>
         <localizacion>
             <latitud>41.50</latitud>
             <longitud>-5.74</longitud>

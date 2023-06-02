@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<web xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="ventaOnline.xsd">
+    <usuarios>
+        <user>
+            <mail>ebeatogu@upsa.es</mail>
+            <password>12345678</password>
+            <direccion>C/Compañia 5, Salamanca</direccion>
+            <formasPago>
+                <tarjeta nombre="visa">4231657898234187</tarjeta>
+                <tarjeta>6578987688990076</tarjeta>
+            </formasPago>
+        </user>
+        <user>
+            <mail>abcdefghi@upsa.es</mail>
+            <password>12345678</password>
+            <direccion>C/Compañia 5, Salamanca</direccion>
+        </user>
+        <user>
+            <mail>ebeatogu@gmail.com</mail>
+            <password>12345678</password>
+            <direccion>C/Compañia 5, Salamanca</direccion>
+            <formasPago>
+                <tarjeta nombre="tarjetaDebito">4231657800234187</tarjeta>
+                <tarjeta>6578987688990000</tarjeta>            
+            </formasPago>
+        </user>
+        <user>
+            <mail>abc33@gmail.com</mail>
+            <password>12345678</password>
+            <direccion>C/Compañia 5, Salamanca</direccion>
+        </user>
+    </usuarios>
+    <productos>
+        <producto>
+            <codigo>P12345</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>125.2</precio>  
+        </producto>
+        <producto>
+            <codigo>P12346</codigo>
+            <localizacion>
+                <pasillo>B</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>15</precio>  
+        </producto><producto>
+            <codigo>P12347</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>2</estanteria>
+            </localizacion>
+            <precio>123.55</precio>  
+        </producto><producto>
+            <codigo>P12348</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>55</precio>  
+        </producto><producto>
+            <codigo>P12349</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>10</precio>  
+        </producto><producto>
+            <codigo>P12322</codigo>
+            <localizacion>
+                <pasillo>Z</pasillo>
+                <estanteria>5</estanteria>
+            </localizacion>
+            <precio>123.55</precio>  
+        </producto><producto>
+            <codigo>P12310</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>20</precio>  
+        </producto><producto>
+            <codigo>P12311</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>1123.55</precio>  
+        </producto><producto>
+            <codigo>P12312</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>123.55</precio>  
+        </producto>
+        <producto>
+            <codigo>P12313</codigo>
+            <localizacion>
+                <pasillo>L</pasillo>
+                <estanteria>1</estanteria>
+            </localizacion>
+            <precio>1223.55</precio>  
+        </producto>
+        <producto>
+            <codigo>P12314</codigo>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>3</estanteria>
+            </localizacion>
+            <precio>1235</precio>  
+        </producto><producto>
+            <codigo>P12315</codigo>
+            <localizacion>
+                <pasillo>X</pasillo>
+                <estanteria>2</estanteria>
+            </localizacion>
+            <precio>55</precio>  
+        </producto>
+        
+    </productos>
+    <compras>
+        <compra codProducto="P12345" usuario="ebeatogu@upsa.es">
+            <unidades>2</unidades>
+            <fecha>2017-04-27</fecha>
+            <codigoCompra>2017-44</codigoCompra>
+        </compra>
+        <compra codProducto="P12346" usuario="ebeatogu@upsa.es">
+            <fecha>2017-04-23</fecha>
+            <codigoCompra>2017-22</codigoCompra>
+            <unidades>1</unidades>         
+        </compra>
+        <compra codProducto="P12347" usuario="ebeatogu@gmail.com">
+            <codigoCompra>2017-33</codigoCompra>
+            <unidades>1</unidades>
+            <fecha>2017-04-20</fecha>
+        </compra>
+        <compra codProducto="P12345" usuario="abcdefghi@upsa.es">
+            <unidades>2</unidades>
+            <codigoCompra>2017-45</codigoCompra>
+            <fecha>2017-04-27</fecha>
+        </compra>
+        <compra codProducto="P12346" usuario="abcdefghi@upsa.es">
+            <fecha>2017-04-23</fecha>
+            <codigoCompra>2017-34</codigoCompra>
+            <unidades>1</unidades>         
+        </compra>
+        <compra codProducto="P12347" usuario="abcdefghi@upsa.es">
+            <unidades>1</unidades>
+            <codigoCompra>2017-50</codigoCompra>
+            <fecha>2017-04-20</fecha>
+        </compra>
+        <compra codProducto="P12345" usuario="abc33@gmail.com">
+            <unidades>2</unidades>
+            <codigoCompra>2017-51</codigoCompra>
+            <fecha>2017-04-27</fecha>
+        </compra>
+        <compra codProducto="P12346" usuario="abc33@gmail.com">
+            <fecha>2017-04-23</fecha>
+            <codigoCompra>2017-52</codigoCompra>
+            <unidades>1</unidades>         
+        </compra>
+        <compra codProducto="P23447" usuario="abc33@gmail.com">
+            <unidades>1</unidades>
+            <codigoCompra>2017-53</codigoCompra>
+            <fecha>2017-04-20</fecha>
+        </compra>
+            
+    </compras>
+    
+</web>

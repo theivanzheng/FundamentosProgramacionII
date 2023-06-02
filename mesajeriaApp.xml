@@ -11,7 +11,7 @@ and open the template in the editor.
 
 
 <mensajeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:noNamespaceSchemaLocation="mesajeriaApp.xsd"> 
+   xsi:noNamespaceSchemaLocation="mensajeriaApp.xsd"> 
 <!-- SCHEMA
 <mensajeria>-->
     <usuarios>
@@ -19,11 +19,14 @@ and open the template in the editor.
             <nombre>Julian</nombre>
             <bloqueados>
                 <bloqueado user="mmm123"/>
+                <bloqueado user="mmm123"/>
+
             </bloqueados>
         </usuario>
-        <usuario login="mmm123" password="1234avc78">
+        <usuario login="mm123" password="1234avc78">
             <nombre>Maria</nombre>
             <bloqueados>
+                <bloqueado user="lu123"/>
                 <bloqueado user="lu123"/>
             </bloqueados>
         </usuario>

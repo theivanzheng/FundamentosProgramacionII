@@ -8,4 +8,126 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
 
+    <xs:element name="mensajeria" type="tMensajeria">
+        <xs:key name="usuarioKey">
+            <xs:selector xpath="usuarios/usuario"/>
+            <xs:field xpath="@login"/>
+        </xs:key>
+        <xs:key name="grupoLoginKey">
+            <xs:selector xpath="grupos/grupo"/>
+            <xs:field xpath="@login"/>
+        </xs:key>   
+     <xs:keyref name="bloqueadosKeyRef" refer="usuarioKey">
+            <xs:selector xpath="./usuarios/usuario/bloqueados/bloqueado"/>
+            <xs:field xpath="@user"/>
+        </xs:keyref>
+        
+
+            
+    </xs:element>
+    
+    <xs:complexType name="tMensajeria">
+            <xs:sequence>
+                <xs:element name="usuarios"     type="tUsuarios"/>
+                <xs:element name="grupos"       type="tGrupos"      minOccurs="0"/>
+                <xs:element name="mensajes"     type="tMensajes"/>
+            </xs:sequence>
+    </xs:complexType>
+        
+    
+    <xs:complexType name="tUsuarios">
+        <xs:sequence>
+            <xs:element name="usuario" minOccurs="1" maxOccurs="unbounded" type="tUsuario">
+
+            </xs:element>
+        </xs:sequence>
+        
+    </xs:complexType>
+    
+    <xs:simpleType name="tLogin">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][a-zA-Z0-9]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tPassword">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{8}[a-zA-Z0-9]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:complexType name="tUsuario">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="bloqueados" type="tBloqueados" minOccurs="0">
+            
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="login" use="required" type="tLogin"/>
+        <xs:attribute name="password" use="required" type="tPassword"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tBloqueados">
+        <xs:sequence>
+            <xs:element name="bloqueado"  type="tBloqueado" maxOccurs="unbounded">
+                <xs:unique name="bloqueadoKey">
+                    <xs:selector xpath="bloqueado"/>
+                    <xs:field xpath="@user"/>
+                </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tBloqueado">
+                <xs:attribute name="user" type="tLogin" use="required"/>
+
+    </xs:complexType>
+    
+    <xs:complexType name="tGrupos">
+        <xs:sequence>
+            <xs:element name="grupo"    type="tGrupo" maxOccurs="unbounded" /> 
+        </xs:sequence>   
+    </xs:complexType>
+    
+    <xs:complexType name="tGrupo">
+        <xs:sequence>
+            <xs:element name="miembro" type="tMiembro" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="login" use="required" type="tLogin"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tMiembro">
+        <xs:attribute name="usuario" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tMensajes">
+        <xs:sequence>
+            <xs:element name="mensaje" maxOccurs="unbounded" type="tMensaje"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tMensaje">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="texto" type="tTexto"/>
+               <xs:element name="video" type="xs:string"/>
+               <xs:element name="imagen" type="xs:string"/>
+        </xs:choice>           
+                    <xs:attribute name="emisor"     type="xs:string"    use="required"/>
+                    <xs:attribute name="receptor"   type="xs:string"    use="required"/>
+                    <xs:attribute name="recibido"   type="xs:string"    use="optional" fixed="si"/>
+                    <xs:attribute name="leido"      type="xs:string"    use="optional" fixed="si"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tTexto" mixed="true">
+        <xs:sequence>
+            <xs:element name="emoji" minOccurs="0" maxOccurs="unbounded" type="tEmoji"/>
+        </xs:sequence>
+    </xs:complexType>
+  
+    <xs:simpleType name="tEmoji">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9]?"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

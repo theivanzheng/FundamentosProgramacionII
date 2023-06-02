@@ -59,7 +59,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
             <xs:element          name="descripcion"              type="tDescripcion"/>
             <xs:element          name="color"                    type="xs:string"/>
             <xs:element          name="almacen"                  type="tAlmacen">
-                 <xs:key         name="tipoTallasKey">
+               <xs:key         name="tipoTallasKey">
                  <xs:selector    xpath="./stock"/>
                 <xs:field        xpath="@talla"/>  
               </xs:key>

@@ -9,26 +9,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
            elementFormDefault="qualified">
     <xs:element name="reservas" type="tReservas">
         <!--Mis claves globales-->
-        <xs:key name="loginKey">
-            <xs:selector xpath="./usuario"/>
-            <xs:field    xpath="@login"/>
-        </xs:key>
-        <xs:key name="codigoHotelKey">
-            <xs:selector xpath="./hotel"/>
-            <xs:field    xpath="@codigo"/>
-        </xs:key>
-        <xs:key name="reservaKey">
-            <xs:selector xpath=".//reserva"/>
-            <xs:field    xpath="codigo"/>
-        </xs:key>
-        <xs:keyref name="codigoReservaHotel" refer="codigoHotelKey">
-            <xs:selector xpath="reserva"/>
-            <xs:field xpath="@hotel"/>
-        </xs:keyref>
-        <xs:keyref name="codigoUsuarioReserva" refer="loginKey">
-            <xs:selector xpath="reserva"/>
-            <xs:field xpath="@user"/>
-        </xs:keyref>        
+      <xs:key name="usuarioKey">
+         <xs:selector xpath="./usuario"/>
+         <xs:field xpath="@login"/>
+      </xs:key>
+      <xs:key name="hotelKey">
+         <xs:selector xpath="./hotel"/>
+         <xs:field xpath="@codigo"/>
+      </xs:key>
+      <xs:key name="reserva">
+         <xs:selector xpath="./reserva"/>
+         <xs:field xpath="codigo"/>
+      </xs:key> 
+      <xs:keyref name="hotelReservaKeyref" refer="hotelKey">
+        <xs:selector xpath="reserva"/>
+        <xs:field xpath="@hotel"/>
+      </xs:keyref>     
+      <xs:keyref name="usuarioReservaKey" refer="usuarioKey">
+        <xs:selector xpath="reserva"/>
+        <xs:field xpath="@user"/>
+      </xs:keyref>         
     </xs:element>
     
     <!--La rama estructural de todo mi documento-->
@@ -72,11 +72,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
         <xs:sequence>
             <xs:element  name="nombre"    type="xs:string"/>
             <xs:element  name="pago"      type="tPago">
-                <xs:key name="unicaTarjetUserKey">
+                <xs:key name="numTarjetaKey">
                     <xs:selector xpath="./tarjeta"/>
                     <xs:field xpath="."/>
                 </xs:key>
-                <xs:key name="unicoPaypalKey">
+                <xs:key name="paypalRepeKey">
                     <xs:selector xpath="./paypal"/>
                     <xs:field xpath="@usuario"/>
                 </xs:key>
@@ -93,8 +93,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
     <xs:complexType name="tPago">
         <xs:choice maxOccurs="unbounded" minOccurs="1">
             <xs:element name="tarjeta"  type="tTarjeta"/>
-            <xs:element name="paypal"   type="tPaypal">
-                 
+            <xs:element name="paypal"   type="tPaypal"> 
             </xs:element>    
         </xs:choice>
     </xs:complexType>

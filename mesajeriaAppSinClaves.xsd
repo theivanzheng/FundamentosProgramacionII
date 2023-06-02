@@ -10,12 +10,31 @@ and open the template in the editor.
            elementFormDefault="qualified">
     
     <xs:element name="mensajeria" type = "tMensajeria">
-           </xs:element>
+        <xs:key name="usuarioKey">
+            <xs:selector xpath="usuarios/usuario"/>
+            <xs:field    xpath="@login"/>
+        </xs:key>
+        
+        <xs:keyref name="grupoUsuarioKeyRef" refer="usuarioKey">
+            <xs:selector xpath="grupos/grupo/miembro"/>
+            <xs:field    xpath="@usuario"/>
+        </xs:keyref> 
+               
+         <xs:key name="grupoKey">
+            <xs:selector xpath="grupos/grupo"/>
+            <xs:field    xpath="@login"/>
+        </xs:key>
+        
+        <xs:keyref name="usuarioBloqueakoKey" refer="usuarioKey">
+            <xs:selector xpath="usuarios/usuario/bloqueados/bloqueado"/>
+            <xs:field    xpath="@user"/>
+        </xs:keyref>    
+    </xs:element>
     
     <xs:complexType name="tMensajeria">
         <xs:sequence>
             <xs:element name = "usuarios" type = "tUsuarios"/>
-            <xs:element name = "grupos" type = "tGrupos" minOccurs="0"/>
+            <xs:element name = "grupos"   type = "tGrupos" minOccurs="0"/>
             <xs:element name = "mensajes" type = "tMensajes"/>
         </xs:sequence>
     </xs:complexType>
@@ -27,7 +46,7 @@ and open the template in the editor.
     </xs:complexType>
     <xs:complexType name="tGrupos">
         <xs:sequence>
-            <xs:element name = "grupo" type = "tGrupo" maxOccurs="unbounded">
+            <xs:element name = "grupo"   type = "tGrupo" maxOccurs="unbounded">
                 
             </xs:element>
         </xs:sequence>
@@ -41,12 +60,14 @@ and open the template in the editor.
     <xs:complexType name="tUsuario">
         <xs:sequence>
             <xs:element name = "nombre" type = "xs:string"/>
+           
             <xs:element name = "bloqueados" type = "tBloqueados" minOccurs="0">
-                <xs:key name="bloqueadosKey">
+                <xs:unique name="bloqueadosKey">
                     <xs:selector xpath="bloqueado"/>
                     <xs:field    xpath="@user"/>
-                </xs:key>
+                </xs:unique>
             </xs:element>
+            
         </xs:sequence>
         <xs:attribute name="login"    type="tLogin"    use="required"/>
         <xs:attribute name="password" type="tPassword" use="required"/>
